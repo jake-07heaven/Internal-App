@@ -1,0 +1,1 @@
+[13-Oct-2015 15:07:10 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/stillwellsupport/public_html/internal-app/js/employee-edit.php on line 4

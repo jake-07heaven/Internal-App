@@ -1,0 +1,372 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-Oct-2014, 15:28:23
+    Author     : Jake
+*/
+$darkBlue: #163d68;
+$lightBlue: #32a6de;
+/*LOGIN*/
+.login {
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 100px auto;
+    border: #A5A5A5 3px solid;
+    input {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 16px;
+        border: #A5A5A5 solid 1px;
+        margin: 15px 0;
+        padding: 5px;
+    }
+    input[type="submit"] {
+        background-color: #29aae2;
+        border: none;
+        padding: 10px 0;
+        color: white;
+    }
+    h1 {
+        text-align: center;
+        background: linear-gradient();
+    }
+    
+}
+/*HEADER */
+header {
+    background: #29aae2;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,#29aae2 0,#0855a3 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#29aae2),color-stop(100%,#0855a3));
+    background: -webkit-linear-gradient(top,#29aae2 0,#0855a3 100%);
+    background: -o-linear-gradient(top,#29aae2 0,#0855a3 100%);
+    background: -ms-linear-gradient(top,#29aae2 0,#0855a3 100%);
+    background: linear-gradient(to bottom,#29aae2 0,#0855a3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#29aae2',endColorstr='#0855a3',GradientType=0);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .logo {
+	width: 307px;
+	padding-left: 25px;
+    }
+    .header-button {
+	color: white;
+	text-decoration: none;
+	padding: 15px;
+	margin: 0 15px;
+	height: 100%;
+    }
+    .header-right {
+	margin: 30px 0;
+	font-size: 20px;
+    }
+    span {
+	color: white;
+    }
+}
+/*FOOTER*/
+
+/*NAV*/
+nav {
+    background-color: $darkBlue;
+    text-align: center;
+    a {
+        padding: 25px 40px;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 25px 56px;
+        font-size: 18px;
+        display: inline-block;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $lightBlue;
+        text-decoration: none;
+    }
+    a.current {
+        color: $lightBlue;
+    }
+}
+
+/*GLOBAL*/
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+    min-height: 100%;
+}
+.right {
+    float: right;
+}
+.float-left {
+    float: left;
+}
+.hidden {
+    display: none;
+}
+
+.one-col {
+    width: 90%;
+    margin: 0 auto;
+}
+.four-col {
+    float: left;
+    width: 25%;
+}
+.table {
+    width: 100%;
+    table {
+        width: 100%;
+    }
+    table td {
+        width: 85px;
+        padding: 5px;
+        text-align: center;
+    } 
+    .table-titles {
+    color: #32a6de;
+    text-transform: uppercase;
+    }
+}
+.table-input {
+    width: 100%;
+    table {
+        width: 100%;
+    }
+    table td {
+        padding: 5px;
+    } 
+}
+.single_page {
+    .section-header {
+        text-align: center;
+        h2 {
+            color: #163d68;
+            font-size: 35px;
+            margin: 10px 0 10px 0;
+            text-transform: uppercase;
+        }
+        p {
+           color: #163d68;
+            font-size: 14px;
+            margin: 0 0 10px 0;
+            text-transform: capitalize;
+        }
+    }	
+}
+.section-header-input {
+    width: 50%;
+    margin: 0 auto;
+text-align: center;
+}
+.full-width {
+    width: 100%;
+    clear: both;
+}
+.third-width {
+    width: 33.33%;
+    clear: both;
+}
+.thumbnail {
+    width: 100px;
+    margin: 0 auto;
+    padding: 5px;
+}
+.thumbnails {
+    text-align: center;
+    padding: 0;
+}
+.edit-button {
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    img {
+        width: 40px;
+    }
+}
+.delete-button {
+    background-color: #A00D0D;
+    color: white;
+    width: 50%;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.view-button {
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.add-button {
+    color: white;
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    img {
+        width: 50px;
+    }
+}
+.button {
+    cursor: pointer;
+    img {
+        width: 50px;
+    }
+}
+.main-table {
+    width: 80%;
+    margin: auto;
+    tr {
+        float: left;
+        width: 50%;
+        margin: 0 auto;
+        clear: both;
+    }
+}
+/*FORMS*/
+.text-input {
+    font-size: 14px;
+    border: #163D68 1px solid;
+    padding: 10px;
+    border-radius: 9px;
+    margin: 10px 0;
+    width: 100%;
+}
+.textarea {
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 15px;
+    height: 100px;
+    width: 100%;
+}
+/*ROUTES*/
+.routes {
+    width: 70%;
+    h2 {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: $darkBlue;
+        text-align: left;
+    }
+    td {
+        font-size: 16px;
+    }
+    table {
+        max-width: 400px;
+        min-width:100px;
+        margin: 15px auto;
+        tr {
+            width:100%;
+        }
+        td {
+            width: 100%;
+            padding: 5px;
+        }
+    }
+}
+/*SERVICES*/
+
+.services-buttons a {
+	display: block;
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 20px;
+	color: #939597;
+	position: relative;
+	padding-top: 120px;
+}
+
+.services-buttons a:before {
+	content: "";
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -60px;
+	background-position: -120px 0;
+}
+
+.services-buttons a:hover:before {
+	background-position: 0 0;
+}
+
+.services-buttons a#marketing:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470457289-gif/img/icon_services_marketing.gif');
+}
+
+.services-buttons a#web_development:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470512664-gif/img/icon_services_web_development.gif');
+}
+
+.services-buttons a#branding_and_design:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470416604-gif/img/icon_services_branding_and_design.gif');
+}
+
+.services-buttons a#seo:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470385519-gif/img/icon_services_seo.gif');
+}
+
+.services-buttons a#printing:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470488912-gif/img/icon_services_printing.gif');
+}
+
+.services-buttons a#social_media:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2469461960-gif/img/icon_services_social_media.gif');
+}
+
+.services-buttons a#photography:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470457299-gif/img/icon_services_photography.gif');
+}
+
+.services-buttons a#content_creation:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2469461920-gif/img/icon_services_content_creation.gif');
+}
+
+.services-buttons a#shop_signage:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470512609-gif/img/icon_services_shop_signage.gif');
+}
+
+.services-buttons a#ecommerce:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2464635571-gif/img/icon_services_ecommerce.gif');
+}
+
+.services-buttons a#email_marketing:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470466227-gif/img/icon_services_email_marketing.gif');
+}
+
+.services-buttons a#video_production:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470463999-gif/img/icon_services_video_production.gif');
+}
+
+.services-buttons a:hover,
+.services-buttons a:focus {
+	text-decoration: none;
+	color: #163e68;
+}
+
+.services-buttons a:hover p,
+.services-buttons a:focus p {
+	border-top: 3px solid #163e68;
+}
+
+.services-buttons a img {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+.services-buttons a p {
+	border-top: 3px solid #fff;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
