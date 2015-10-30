@@ -57,7 +57,13 @@ header {
     margin: 30px 0;
     font-size: 20px; }
   header span {
-    color: white; }
+    color: white;
+    width: 150px;
+    text-align: left;
+    display: block;
+    float: left; }
+  header #t {
+    width: 85px; }
 
 /*FOOTER*/
 /*NAV*/

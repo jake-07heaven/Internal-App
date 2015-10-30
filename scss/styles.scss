@@ -65,7 +65,14 @@ header {
 	font-size: 20px;
     }
     span {
-	color: white;
+        color: white;
+        width: 150px;
+        text-align: left;
+        display: block;
+        float: left;
+    }
+    #t {
+        width: 85px;
     }
 }
 /*FOOTER*/
