@@ -118,7 +118,7 @@ body {
 
 .one-col {
     width: 90%;
-    margin: 0 auto;
+    margin: 25px auto;
 }
 .four-col {
     float: left;
@@ -376,4 +376,21 @@ text-align: center;
 	padding-top: 10px;
 	margin-top: 10px;
 	text-transform: uppercase;
+}
+
+//Dashboard//
+.two-col {
+    width: 100%;
+    max-width: 1250px;
+    margin: 25px auto;
+}
+.left-col {
+    width:50%;
+    min-width: 300px;
+    padding: 10px 2.5%;
+}
+.right-col {
+    width: 50%;
+    min-width: 300px;
+    padding: 10px 2.5%;
 }

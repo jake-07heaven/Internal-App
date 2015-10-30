@@ -21,7 +21,7 @@
                 {
                      $button = "";
                 }
-                echo "<tr><td class='view-button company-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . $key->id . "</td><td>" . date('s/m/Y',strtotime($key->date_joined)) . "</td><td>" . $key->number . "</td><td>" . $key->contact . "</td><td>" . $key->spend . "</td><td>" . $key->happiness . "</td><td>" . date('s/m/Y',strtotime($key->last_contact)) . "</td><td>" . $button . "</td></tr>";
+                echo "<tr><td class='view-button company-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . $key->id . "</td><td>" . date('s/m/y',strtotime($key->date_joined)) . "</td><td>" . $key->number . "</td><td>" . $key->contact . "</td><td>" . $key->spend . "</td><td>" . $key->happiness . "</td><td>" . date('s/m/y',strtotime($key->last_contact)) . "</td><td>" . $button . "</td></tr>";
                  }?>
             </table>
         </div>
@@ -37,7 +37,7 @@
                 {
                      $button = "";
                 }
-                echo "<tr><td class='view-button company-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . $key->id . "</td><td>" . date('s/m/Y',strtotime($key->date_joined)) . "</td><td>" . $key->number . "</td><td>" . $key->contact . "</td><td>" . $key->spend . "</td><td>" . $key->happiness . "</td><td>" . date('s/m/Y',strtotime($key->last_contact)) . "</td><td>" . $button . "</td></tr>";
+                echo "<tr><td class='view-button company-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . $key->id . "</td><td>" . date('s/m/y',strtotime($key->date_joined)) . "</td><td>" . $key->number . "</td><td>" . $key->contact . "</td><td>" . $key->spend . "</td><td>" . $key->happiness . "</td><td>" . date('s/m/y',strtotime($key->last_contact)) . "</td><td>" . $button . "</td></tr>";
                 }?>
             </table>
         </div>

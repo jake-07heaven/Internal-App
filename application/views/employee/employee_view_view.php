@@ -18,7 +18,7 @@
                     <?php foreach ($employee_info as $key) {
                         echo "<tr><td>" . $key->attendance . "%</td><td>" . $key->late . "%</td><td>" . $key->holiday_days . "</td><td>" . $key->holiday_taken . "</td><td>" . $userSalary . "</td></tr>";
                         echo "<tr class='table-titles'><td>last kpi</td><td>kpi</td><td>total kpi</td><td>join date</td><td>days</td></tr>";
-                        echo "<tr><td>" . $key->last_kpi . "%</td><td>" . $key->kpi . "%</td><td>" . $key->total_kpi . "%</td><td>" . date('s/m/Y',strtotime($userjoin_date)) . "</td><td>" . $key->days . "</td></tr>";
+                        echo "<tr><td>" . $key->last_kpi . "%</td><td>" . $key->kpi . "%</td><td>" . $key->total_kpi . "%</td><td>" . date('s/m/y',strtotime($userjoin_date)) . "</td><td>" . $key->days . "</td></tr>";
                     }?>
             </table>
         </div>
@@ -47,7 +47,7 @@
                     if ($hr_data != null)
                {
                foreach ($hr_data as $key) {
-                    echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/Y',strtotime($key->date)) . "</td><td>" . $key->level . "</td><td>" . $key->issue . "</td><td>" . $key->meeting . "</td><td>" . $key->letter . "</td><td>" . $key->followed_up . "</td></tr>";
+                    echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->date)) . "</td><td>" . $key->level . "</td><td>" . $key->issue . "</td><td>" . $key->meeting . "</td><td>" . $key->letter . "</td><td>" . $key->followed_up . "</td></tr>";
                 }}?>
             </table>
         </div>

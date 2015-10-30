@@ -85,7 +85,7 @@
                     <table>
                         <tr class="table-titles"><td>Name</td><td>Start</td><td>Deadline</td><td>Price</td><td>Cost</td><td>Profit</td><td>Hours</td><td>taken</td></tr>
                         <?php foreach ($current_jobs as $key) {
-                            echo "<tr><td class='view-button job-view-button' id='" . $key->id . "'>" . $key->name ."</td><td>" . date('s/m/Y',strtotime($key->start_date)) . "</td><td>" . date('s/m/Y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td></tr>";
+                            echo "<tr><td class='view-button job-view-button' id='" . $key->id . "'>" . $key->name ."</td><td>" . date('s/m/y',strtotime($key->start_date)) . "</td><td>" . date('s/m/y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td></tr>";
                             }?>
                     </table>
                 </div>
@@ -94,7 +94,7 @@
                     <table>
                         <tr class="table-titles"><td>Name</td><td>Start</td><td>deadline</td><td>Price</td><td>Cost</td><td>Profit</td><td>Hours</td><td>taken</td></tr>
                         <?php foreach ($completed_jobs as $key) {
-                            echo "<tr><td class='job-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . date('s/m/Y',strtotime($key->start_date)) ."</td><td>" . date('s/m/Y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td></tr>";
+                            echo "<tr><td class='job-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->start_date)) ."</td><td>" . date('s/m/y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td></tr>";
                             }?>
                     </table>
                 </div>

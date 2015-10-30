@@ -20,7 +20,7 @@
 			 	<table>
 					<tr class="table-titles"><td>Start</td><td>Deadline</td><td>price</td><td>cost</td><td>profit</td></tr>
 					<?php foreach ($job_info as $key) {
-						echo "<tr><td>" . date('s/m/Y',strtotime($start_date)) . "</td><td>" . date('s/m/Y',strtotime($deadline_date)) . "</td><td>" . $price . "</td><td>" . $cost . "</td><td>" . $profit . "</td></tr>";
+						echo "<tr><td>" . date('s/m/y',strtotime($start_date)) . "</td><td>" . date('s/m/y',strtotime($deadline_date)) . "</td><td>" . $price . "</td><td>" . $cost . "</td><td>" . $profit . "</td></tr>";
 						echo "<tr class='table-titles'><td>time estimate</td><td>time taken</td><td>stage</td><td>deposit paid</td><td>to pay</td></tr>";
 						echo "<tr><td>" . $key->time_estimated . "</td><td>" . $taken . "</td><td>" . $key->stage . "</td><td>" . $key->deposit_paid . "</td><td>" . $key->to_pay . "</td></tr>";
 					}?>
@@ -42,7 +42,7 @@
 				<table>
 				   	<tr class="table-titles"><td>Name</td><td>Join Date</td><td>Salary</td><td>website</td><td>design</td><td>marketing</td><td>seo</td><td>social media</td><td>happiness</td></tr>
 				   <?php foreach ($employees_view as $key) {
-				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/Y',strtotime($key->join_date)) . "</td><td>" . $key->salary . "</td><td>" . $key->website . "</td><td>" . $key->design . "</td><td>" . $key->marketing . "</td><td>" . $key->seo . "</td><td>" . $key->social . "</td><td>" . $key->happiness . "</td></tr>";
+				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->join_date)) . "</td><td>" . $key->salary . "</td><td>" . $key->website . "</td><td>" . $key->design . "</td><td>" . $key->marketing . "</td><td>" . $key->seo . "</td><td>" . $key->social . "</td><td>" . $key->happiness . "</td></tr>";
 		   			}?>
 				</table>
 			</div>

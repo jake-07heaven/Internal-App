@@ -21,7 +21,7 @@
 					<?php foreach ($company_info as $key) {
 						echo "<tr><td>" . $userspend . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->potential . "</td><td>" . $key->hours . "</td></tr>";
 						echo "<tr class='table-titles'><td>join date</td><td>refferals</td><td>success</td><td>amount</td><td>lsat contact</td></tr>";
-						echo "<tr><td>" . date('s/m/Y',strtotime($userjoin_date)) . "</td><td>" . $key->refferals . "</td><td>" . $key->success . "</td><td>" . $key->amount . "</td><td>" . date('s/m/Y',strtotime($userlastcontact)) . "</td></tr>";
+						echo "<tr><td>" . date('s/m/y',strtotime($userjoin_date)) . "</td><td>" . $key->refferals . "</td><td>" . $key->success . "</td><td>" . $key->amount . "</td><td>" . date('s/m/Y',strtotime($userlastcontact)) . "</td></tr>";
 					}?>
 				</table>
 			</div>
@@ -44,7 +44,7 @@
 				   	if ($job_potential != null)
 				   {
 				   foreach ($job_potential as $key) {
-				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/Y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
+				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
 				   }}?>
 				</table>
 				</div>
@@ -56,7 +56,7 @@
 				   if ($job_ongoing != null)
 				   {
 				   foreach ($job_ongoing as $key) {
-				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/Y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
+				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
 				   }}?>
 				</table>
 				</div>
@@ -68,7 +68,7 @@
 				   if ($job_completed != null)
 				   {
 				   foreach ($job_completed as $key) {
-				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/Y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
+				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
 				   }}?>
 				</table>
 			</div>
@@ -81,7 +81,7 @@
 				   if ($issue_open != null)
 				   {
 				   foreach ($issue_open as $key) {
-				   	echo "<tr><td>" . $key->company . "</td><td>" . $key->date . "</td><td>" . $key->service . "</td><td>" . $key->issue . "</td><td>" . $key->priority . "</td><td>" . $key->resolved . "</td><td>" . $key->cause . "</td><td>" . $key->client_feeling . "</td></tr>";
+				   	echo "<tr><td>" . $key->company . "</td><td>" . date('s/m/y',strtotime($key->date)) . "</td><td>" . $key->service . "</td><td>" . $key->issue . "</td><td>" . $key->priority . "</td><td>" . $key->resolved . "</td><td>" . $key->cause . "</td><td>" . $key->client_feeling . "</td></tr>";
 				   }}?>
 				</table>
 				</div>
@@ -93,7 +93,7 @@
 				   if ($issue_closed != null)
 				   {
 				   foreach ($issue_closed as $key) {
-				   	echo "<tr><td>" . $key->company . "</td><td>" . $key->date . "</td><td>" . $key->service . "</td><td>" . $key->issue . "</td><td>" . $key->priority . "</td><td>" . $key->resolved . "</td><td>" . $key->cause . "</td><td>" . $key->client_feeling . "</td></tr>";
+				   	echo "<tr><td>" . $key->company . "</td><td>" . date('s/m/y',strtotime($key->date)) . "</td><td>" . $key->service . "</td><td>" . $key->issue . "</td><td>" . $key->priority . "</td><td>" . $key->resolved . "</td><td>" . $key->cause . "</td><td>" . $key->client_feeling . "</td></tr>";
 				   }}?>
 				</table>
 			</div>
