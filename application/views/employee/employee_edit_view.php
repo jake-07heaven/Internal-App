@@ -84,10 +84,10 @@ foreach ($employee_info as $key) {
             <div class="table-input">
                 <table>
                 <tr><td>Qualifications: <textarea class="text-input" type="text" name="qualifications" id="qualifications"><?php echo $qualifications; ?></textarea></td></tr>
-                <tr><td>Training: <input class="text-input" type="text" name="training" id="training" value="<?php echo $training; ?>"></td></tr>
-                <tr><td>Books Read: <input class="text-input" type="text" name="books_read" id="books_read" value="<?php echo $books_read; ?>"></td></tr>
-                <tr><td>External Learning: <input class="text-input" type="text" name="external_learning" id="external_learning" value="<?php echo $external_learning; ?>"></td></tr>
-                <tr><td>Notes: <input class="text-input" type="text" name="notes" id="notes" value="<?php echo $notes; ?>" ></td></tr>
+                <tr><td>Training: <textarea class="text-input" type="text" name="training" id="training"><?php echo $training; ?></textarea></td></tr>
+                <tr><td>Books Read: <textarea class="text-input" type="text" name="books_read" id="books_read"><?php echo $books_read; ?></textarea></td></tr>
+                <tr><td>External Learning: <textarea class="text-input" type="text" name="external_learning" id="external_learning"><?php echo $external_learning; ?></textarea></td></tr>
+                <tr><td>Notes: <textarea class="text-input" type="text" name="notes" id="notes"><?php echo $notes; ?></textarea></td></tr>
                 <tr><td><input class="text-input" type="submit" value="Update Employee"></td></tr>
                 <tr><td><div id="<?php echo $id; ?>" class="delete-button employee-delete-button">DELETE</div></td></tr>
                 </table>

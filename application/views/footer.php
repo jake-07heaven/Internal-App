@@ -172,7 +172,7 @@ $('.add-employee-button-job').click(function() {
     var currnet_employees_names = $('.linked_employees_view').val();
     if (current_employees.indexOf(employee_id) == -1)
     {
-        var new_employees_names = currnet_employees_names + employee_name  + " "; 
+        var new_employees_names = currnet_employees_names + employee_name  + ", "; 
         var new_employees = current_employees + employee_id  + ",";
        
         $('.linked_employees').val(new_employees);
@@ -187,7 +187,7 @@ $('.add-employee-button-job').click(function() {
 
 $('.remove-employee-button-job').click(function() {
     var rem_employee_id = $("#employee-select").val() + ',';
-    var rem_employee_name = $('#employee-select option:selected').text() + ' ';
+    var rem_employee_name = $('#employee-select option:selected').text() + ', ';
     var rem_current_employees = $('.linked_employees').val();
     var rem_currnet_employees_names = $('.linked_employees_view').val();
     var rem_new_employees = rem_current_employees.replace(rem_employee_id, '');
@@ -205,7 +205,7 @@ $('.add-job-button-job').click(function() {
     var currnet_jobs_names = $('.linked_jobs_view').val();
     if (current_jobs.indexOf(job_id) == -1)
     {
-        var new_jobs_names = currnet_jobs_names + job_name + " "; 
+        var new_jobs_names = currnet_jobs_names + job_name + ", "; 
         var new_jobs = current_jobs + job_id + ",";
        
         $('.linked_jobs').val(new_jobs);
@@ -220,7 +220,7 @@ $('.add-job-button-job').click(function() {
 
 $('.remove-job-button-job').click(function() {
     var rem_job_id = $("#job-select").val() + ',';
-    var rem_job_name = $('#job-select option:selected').text() + ' ';
+    var rem_job_name = $('#job-select option:selected').text() + ', ';
     var rem_current_jobs = $('.linked_jobs').val();
     var rem_currnet_jobs_names = $('.linked_jobs_view').val();
     var rem_new_jobs = rem_current_jobs.replace(rem_job_id, '');
@@ -238,7 +238,7 @@ $('.add-company-button-job').click(function() {
     var currnet_companies_names = $('.linked_companies_view').val();
     if (current_companies.indexOf(company_id) == -1)
     {
-        var new_companies_names = currnet_companies_names + company_name + " "; 
+        var new_companies_names = currnet_companies_names + company_name + ", "; 
         var new_companies = current_companies + company_id + ",";
        
         $('.linked_companies').val(new_companies);
@@ -253,7 +253,7 @@ $('.add-company-button-job').click(function() {
 
 $('.remove-company-button-job').click(function() {
     var rem_company_id = $("#company-select").val() + ',';
-    var rem_company_name = $('#company-select option:selected').text() + ' ';
+    var rem_company_name = $('#company-select option:selected').text() + ', ';
     var rem_current_companies = $('.linked_companies').val();
     var rem_currnet_companies_names = $('.linked_companies_view').val();
     var rem_new_companies = rem_current_companies.replace(rem_company_id, '');
@@ -324,7 +324,7 @@ $('.add-employee-button-issue').click(function() {
     var currnet_employees_names = $('.linked_employees_view').val();
     if (current_employees.indexOf(employee_id) == -1)
     {
-        var new_employees_names = currnet_employees_names + employee_name  + " "; 
+        var new_employees_names = currnet_employees_names + employee_name  + ", "; 
         var new_employees = current_employees + employee_id  + ",";
        
         $('.linked_employees').val(new_employees);
@@ -339,7 +339,7 @@ $('.add-employee-button-issue').click(function() {
 
 $('.remove-employee-button-issue').click(function() {
     var rem_employee_id = $("#employee-select").val() + ',';
-    var rem_employee_name = $('#employee-select option:selected').text() + ' ';
+    var rem_employee_name = $('#employee-select option:selected').text() + ', ';
     var rem_current_employees = $('.linked_employees').val();
     var rem_currnet_employees_names = $('.linked_employees_view').val();
     var rem_new_employees = rem_current_employees.replace(rem_employee_id, '');
@@ -357,7 +357,7 @@ $('.add-company-button-issue').click(function() {
     var currnet_companies_names = $('.linked_companies_view').val();
     if (current_companies.indexOf(company_id) == -1)
     {
-        var new_companies_names = currnet_companies_names + company_name + " "; 
+        var new_companies_names = currnet_companies_names + company_name + ", "; 
         var new_companies = current_companies + company_id + ",";
        
         $('.linked_companies').val(new_companies);
@@ -372,7 +372,7 @@ $('.add-company-button-issue').click(function() {
 
 $('.remove-company-button-issue').click(function() {
     var rem_company_id = $("#company-select").val() + ',';
-    var rem_company_name = $('#company-select option:selected').text() + ' ';
+    var rem_company_name = $('#company-select option:selected').text() + ', ';
     var rem_current_companies = $('.linked_companies').val();
     var rem_currnet_companies_names = $('.linked_companies_view').val();
     var rem_new_companies = rem_current_companies.replace(rem_company_id, '');

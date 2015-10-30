@@ -54,13 +54,18 @@ class issues extends CI_Controller {
     $data['issue_level'] = $this->issues_model->get_issue_levels($id);
     $data['issue_info'] = $this->issues_model->get_issue_info($id);
     $result1 = $this->issues_model->select_linked_employees($id);
-    $result3 = $this->issues_model->select_linked_companies($id);
     foreach ($result1 as $key) {
       $linked_employees_ids = $key->linked_employees;
     }
-    $ids = explode(",",$linked_employees_ids);
-
-      $data['employees_view'] = $this->issues_model->get_linked_employees($ids);
+    if ($linked_employees_ids == null)
+    {
+        $data['employees_view'] = null;
+    }
+    else {
+    $ids1 = explode(",",$linked_employees_ids);
+    $ids = array_slice($ids1, 0, 1);
+     $data['employees_view'] = $this->issues_model->get_linked_employees($ids);
+    }
       if(5 == $session_data['level'])
       {
         if($view == "profile")

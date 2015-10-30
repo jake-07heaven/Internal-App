@@ -36,6 +36,15 @@ $lightBlue: #32a6de;
     }
     
 }
+
+.small-button {
+    padding: 2px;
+    background: $lightBlue;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+}
 /*HEADER */
 header {
     background: #29aae2;
