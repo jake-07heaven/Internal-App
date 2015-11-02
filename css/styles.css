@@ -8,6 +8,41 @@ and open the template in the editor.
     Created on : 20-Oct-2014, 15:28:23
     Author     : Jake
 */
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-Nov-2015, 15:44:14
+    Author     : jake
+*/
+.admin_page .wrapper {
+  width: 100%; }
+  .admin_page .wrapper .left_sidebar {
+    width: 25%;
+    max-width: 400px;
+    border-right: grey 1px solid;
+    height: 100%;
+    background: linear-gradient(to right, #29aae2 0, #0855a3 100%); }
+  .admin_page .wrapper .content {
+    width: 50%; }
+  .admin_page .wrapper .right_sidebar {
+    width: 25%; }
+
+.left_sidebar img {
+  padding: 10px;
+  margin: 0 auto;
+  width: 100%; }
+.left_sidebar h2 {
+  text-align: center;
+  color: white;
+  text-decoration: underline; }
+.left_sidebar .exit_icon img {
+  padding: 1px;
+  margin: 0 25px 0 5px;
+  width: 35px; }
+
 /*LOGIN*/
 .login {
   width: 300px;
@@ -42,7 +77,7 @@ and open the template in the editor.
 /*HEADER */
 header {
   background: #29aae2;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodÔÇªEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: -moz-linear-gradient(top, #29aae2 0, #0855a3 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #29aae2), color-stop(100%, #0855a3));
   background: -webkit-linear-gradient(top, #29aae2 0, #0855a3 100%);
@@ -59,19 +94,20 @@ header {
     color: white;
     text-decoration: none;
     padding: 15px;
-    margin: 0 15px;
-    height: 100%; }
+    margin: 0 15px; }
+    header .header-button img {
+      width: 35px; }
   header .header-right {
     margin: 30px 0;
     font-size: 20px; }
   header span {
     color: white;
-    width: 165px;
+    width: 188px;
     text-align: left;
     display: block;
     float: left; }
   header #t {
-    width: 95px; }
+    width: 50px; }
 
 /*FOOTER*/
 /*NAV*/

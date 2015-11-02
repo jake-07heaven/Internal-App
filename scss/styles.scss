@@ -7,6 +7,9 @@ and open the template in the editor.
     Created on : 20-Oct-2014, 15:28:23
     Author     : Jake
 */
+
+@import 'imports/admin';
+
 $darkBlue: #163d68;
 $lightBlue: #32a6de;
 /*LOGIN*/
@@ -67,7 +70,10 @@ header {
 	text-decoration: none;
 	padding: 15px;
 	margin: 0 15px;
-	height: 100%;
+        img {
+            width:35px;
+        }
+        
     }
     .header-right {
 	margin: 30px 0;
@@ -75,13 +81,13 @@ header {
     }
     span {
         color: white;
-        width: 165px;
+        width: 188px;
         text-align: left;
         display: block;
         float: left;
     }
     #t {
-        width: 95px;
+        width: 50px;
     }
 }
 /*FOOTER*/
