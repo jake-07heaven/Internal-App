@@ -52,7 +52,7 @@
             <div class="table-input">
                 <table>
                     <tr class="hidden"><td><input class="text-input" type="id" name="id" id="date" value="<?php echo $id; ?>"></td></tr>
-                    <tr><td><input class="text-input" type="submit" value="Add HR"></td></tr>
+                    <tr><td><input class="text-input" type="submit" value="Update HR"></td></tr>
                     <tr><td><div id="<?php echo $id; ?>" class="delete-button hr-delete-button">DELETE</div></td></tr>
                 </table>
             </div>

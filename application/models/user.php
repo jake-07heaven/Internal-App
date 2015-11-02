@@ -30,6 +30,16 @@ Class User extends CI_Model
 
    return $query->result();
  }
+  function get_join_date($id)
+ {
+   $this->db->select('join_date');
+   $this->db->from('employees');
+   $this->db->where('id', $id);
+ 
+   $query = $this->db->get();
+
+   return $query->result();
+ }
  function setLastLogin($id, $date, $attendance)
  {
     $data = array(

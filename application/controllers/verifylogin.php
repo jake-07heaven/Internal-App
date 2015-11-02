@@ -86,22 +86,40 @@ class VerifyLogin extends CI_Controller {
     }
     
     return $current_lateness;
-        
-        
- }
- function get_days(){
-     $result = $this->user->getDays();
-     
-     foreach ($result as $key){
-         $days = $key->days;
-     }
-     
-     return $days;
  }
  function update_percentages($id){
      $attend = $this->get_current_attendance($id);
      $late = $this->get_current_lateness($id);
-     $days = $this->get_days();
+     $join_date = $this->user->get_join_date($id);
+     $date = date('Y-m-d');
+     
+    foreach($join_date as $row)
+    {
+        $days_array = array(
+        'start_date' => $row->join_date
+        );
+    }
+
+    $workingDays[] = 1;
+    $workingDays[] = 2;
+    $workingDays[] = 3;
+    $workingDays[] = 4;
+    $workingDays[] = 5;
+    $holidayDays[] = "";
+
+    $from = new DateTime($days_array['start_date']);
+    $to = new DateTime($date);
+    $to->modify('+1 day');
+    $interval = new DateInterval('P1D');
+    $periods = new DatePeriod($from, $interval, $to);
+
+    $days = 0;
+    foreach ($periods as $period) {
+        if (!in_array($period->format('N'), $workingDays)) continue;
+        if (in_array($period->format('Y-m-d'), $holidayDays)) continue;
+        if (in_array($period->format('*-m-d'), $holidayDays)) continue;
+        $days++;
+    }
      
      $attendPercent = ($attend['attend'] / $days) * 100;
      $latePercent = ($late / $days) * 100;

@@ -37,7 +37,7 @@ Class companies_model extends CI_Model
  }
   function job_completed($ids)
  {
-      $this->db->select();
+   $this->db->select();
    $this->db->from('jobs');
    $this->db->where_in('id', $ids);
    $this->db->where('status', 2);
@@ -197,6 +197,15 @@ Class companies_model extends CI_Model
    $this->db->update('companies_info', $Edata2);
    $this->db->where('id', $data);
    $this->db->update('companies', $Edata1);
+
+   return TRUE;
+ }
+  function updateMoney($data,$data1, $data2)
+ {
+   $this->db->where('id', $data);
+   $this->db->update('companies_info', $data1);
+   $this->db->where('id', $data);
+   $this->db->update('companies', $data2);
 
    return TRUE;
  }

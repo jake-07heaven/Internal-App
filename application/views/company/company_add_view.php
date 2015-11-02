@@ -10,8 +10,8 @@
             </div>
             <div class="table-input">
                 <table>
-                    <tr><td>Company Join Date: <input class="text-input" type="date" name="join_date" id="join_date"></td><td>Company Spend: <input class="text-input" type="number" name="spend" id="spend"></td><td>Company Cost: <input class="text-input" type="number" name="cost" id="cost"></td><td>Company Profit: <input class="text-input" type="number" name="profit" id="profit"></td><td>Company Potential: <input class="text-input" type="number" name="potential" id="potential"></td></tr>
-                    <tr><td>Company Hours: <input class="text-input" type="number" name="hours" id="hours"></td><td>Company Refferals: <input class="text-input" type="number" name="refferals" id="refferals"></td><td>Company Success: <input class="text-input" type="number" name="success" id="success"></td><td>Company Amount: <input class="text-input" type="number" name="amount" id="amount"></td><td>Contact Last Spoken: <input class="text-input" type="date" name="last_contact" id="last_contact"></td></tr>
+                    <tr><td>Company Join Date: <input class="text-input" type="date" name="join_date" id="join_date"></td><td>Company Hours: <input class="text-input" type="number" name="hours" id="hours"></td><td>Company Refferals: <input class="text-input" type="number" name="refferals" id="refferals"></td></tr>
+                    <tr><td>Company Success: <input class="text-input" type="number" name="success" id="success"></td><td>Company Amount: <input class="text-input" type="number" name="amount" id="amount"></td><td>Contact Last Spoken: <input class="text-input" type="date" name="last_contact" id="last_contact"></td></tr>
 
                 </table>
             </div> 

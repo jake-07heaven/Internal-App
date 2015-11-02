@@ -89,6 +89,38 @@ class Companies extends CI_Controller {
       $data['job_potential'] = $this->companies_model->job_potential($jobs_ids);
       $data['job_ongoing'] = $this->companies_model->job_ongoing($jobs_ids);
       $data['job_completed'] = $this->companies_model->job_completed($jobs_ids);
+      
+          $totalPotential = 0;
+    foreach ($data['job_potential'] as $key)
+    {
+        $totalPotential += $key->profit;
+    }
+        $totalprice = 0;
+        $totalcost = 0;
+        $totalprofit = 0;
+    foreach ($data['job_ongoing'] as $key)
+    {
+        $totalprice += $key->price;
+        $totalcost += $key->cost;
+        $totalprofit += $key->profit;
+    }
+    foreach ($data['job_completed'] as $key)
+    {
+        $totalprice += $key->price;
+        $totalcost += $key->cost;
+        $totalprofit += $key->profit;
+    }
+    
+    $updateMoney1 = array(
+        'cost' => $totalcost,
+        'profit' => $totalprofit,
+        'potential' => $totalPotential
+    );
+    $updateMoney2 = array(
+        'spend' => $totalprice
+    );
+    
+    $this->companies_model->updateMoney($id, $updateMoney1,$updateMoney2);
     }
     else
     {
@@ -96,7 +128,6 @@ class Companies extends CI_Controller {
       $data['job_ongoing'] = null;
       $data['job_completed'] = null;
     }
-
       if(5 == $session_data['level'])
       {
         if($view == "profile")
