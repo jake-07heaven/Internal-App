@@ -25,7 +25,16 @@ Class jobs_model extends CI_Model
    $query = $this->db->get();
    return $query->result();
  }
-  function get_all_employees_ids()
+ function get_company_details($name)
+ {
+   $this->db->select('id, contact, number');
+   $this->db->from('companies');
+   $this->db->where('name', $name);
+
+   $query = $this->db->get();
+   return $query->result();
+ }
+ function get_all_employees_ids()
  {
    $this->db->select();
    $this->db->from('jobs');

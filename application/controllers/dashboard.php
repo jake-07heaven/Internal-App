@@ -5,6 +5,7 @@ class Dashboard extends CI_Controller {
  function __construct()
  {
    parent::__construct();
+
  }
 
  function index()
@@ -15,6 +16,8 @@ class Dashboard extends CI_Controller {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
      $data['level'] = $session_data['level'];
+     $data['ongoing_jobs'] = $this->get_ongoing_jobs();
+     $data['ongoing_issues'] = $this->get_ongoing_issues();
      $this->load->view('dashboard_view', $data);
    }
    else
@@ -28,5 +31,17 @@ class Dashboard extends CI_Controller {
    $this->session->unset_userdata('logged_in');
    session_destroy();
    redirect('dashboard', 'refresh');
+ }
+ function get_ongoing_jobs()
+ {
+    $this->load->model('jobs_model','',TRUE);
+    $data = $this->jobs_model->get_current_jobs();
+    return $data;
+ }
+ function  get_ongoing_issues()
+ {
+     $this->load->model('issues_model','',TRUE);
+     $data = $this->issues_model->get_current_issues();
+     return $data;
  }
 }

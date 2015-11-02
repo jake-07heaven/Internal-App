@@ -143,6 +143,8 @@ class Jobs extends CI_Controller {
   $data2['linked_companies'] = $this->input->post('linked_companies');
   $data2['notes'] = $this->input->post('notes');
   $data2['service'] = $this->input->post('service');
+  
+  $Cdata = $this->jobs_model->get_company_details($data2['linked_companies']);
 
   $data1['profit'] = $data1['price'] - $data1['cost'];
   $data2['to_pay'] = $data1['price'] - $data2['deposit_paid'];
@@ -195,7 +197,7 @@ class Jobs extends CI_Controller {
   $data2['linked_companies'] = $this->input->post('linked_companies');
   $data2['notes'] = $this->input->post('notes');
   $data2['service'] = $this->input->post('service');
-
+ 
   $data1['profit'] = $data1['price'] - $data1['cost'];
   $data2['to_pay'] = $data1['price'] - $data2['deposit_paid'];
 
