@@ -14,13 +14,13 @@
 foreach ($company_info as $key) {
 	$address = $key->address;
 	$email = $key->email;
-	$cost = $key->email;
-	$profit = $key->email;
-	$potential = $key->email;
-	$hours = $key->email;
-	$refferals = $key->email;
-	$success = $key->email;
-	$amount = $key->email;
+	$cost = $key->cost;
+	$profit = $key->profit;
+	$potential = $key->potential;
+	$hours = $key->hours;
+	$refferals = $key->refferals;
+	$success = $key->success;
+	$amount = $key->amount;
 }
 ?>
 
@@ -35,7 +35,7 @@ foreach ($company_info as $key) {
                     
         <div class="container">
                 <div class="container">
-                    <div class="col-xs-12"><div class="section-header-input">Name: <input class="text-input" type="text" name="name" id="name"></div></div>
+                    <div class="col-xs-12"><div class="section-header-input">Name: <input class="text-input" type="text" name="name" id="name" value="<?php echo $name; ?>"></div></div>
             </div>
             <div class="table-input">
                 <table>

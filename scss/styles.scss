@@ -141,6 +141,7 @@ body {
 }
 .table {
     width: 100%;
+    min-height: 150px;
     table {
         width: 100%;
     }
@@ -396,7 +397,7 @@ text-align: center;
 //Dashboard//
 .two-col {
     width: 100%;
-    max-width: 1250px;
+    max-width: 1600px;
     margin: 25px auto;
 }
 .left-col {
@@ -408,6 +409,17 @@ text-align: center;
     width: 50%;
     min-width: 300px;
     padding: 10px 2.5%;
+}
+.circle_ammount {
+    background: red;
+    border: black 1px solid;
+    border-radius: 50px;
+    display: block;
+    width: 27px;
+    color: white;
+    position: relative;
+    left: -37px;
+    top: -72px;
 }
 /*Fun begins*/
 .tab_container {
@@ -430,7 +442,6 @@ label {
   float: left;
   width: 50%;
   padding: 1.5em;
-  color: #757575;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
@@ -445,7 +456,6 @@ label {
   display: block;
   padding: 20px;
   background: #fff;
-  color: #999;
   border-bottom: 2px solid #f0f0f0;
 }
 

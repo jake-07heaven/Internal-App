@@ -106,6 +106,15 @@ Class jobs_model extends CI_Model
    $query = $this->db->get();
    return $query->result();
  }
+ function get_ongoing_jobs_extra($ids)
+ {
+   $this->db->select();
+   $this->db->from('jobs_info');
+   $this->db->where_in('id', $ids );
+
+   $query = $this->db->get();
+   return $query->result();
+ }
  function get_completed_jobs()
  {
    $this->db->select();
