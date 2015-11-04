@@ -397,8 +397,9 @@ text-align: center;
 //Dashboard//
 .two-col {
     width: 100%;
-    max-width: 1600px;
-    margin: 25px auto;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 auto;
 }
 .left-col {
     width:50%;
@@ -519,3 +520,4 @@ label .fa {
   	opacity: 1;
   }
 }
+@import 'imports/sidebar';

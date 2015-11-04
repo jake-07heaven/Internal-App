@@ -5,7 +5,9 @@
 </head>
 
 <script src="<?php echo base_url(); ?>js/jquery-1.11.3.min.js" type="text/javascript"></script>
-
+<script src="<?php echo base_url(); ?>js/classie.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>js/sidebarEffects.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>js/modernizr.custom.js" type="text/javascript"></script>
 <script>
 $('.employee-button').click(function() { 
     var id = $(this).attr('id');
