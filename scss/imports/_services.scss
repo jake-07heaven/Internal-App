@@ -1,0 +1,97 @@
+/*SERVICES*/
+
+.services-buttons a {
+	display: block;
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 20px;
+	color: #939597;
+	position: relative;
+	padding-top: 120px;
+}
+
+.services-buttons a:before {
+	content: "";
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -60px;
+	background-position: -120px 0;
+}
+
+.services-buttons a:hover:before {
+	background-position: 0 0;
+}
+
+.services-buttons a#marketing:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470457289-gif/img/icon_services_marketing.gif');
+}
+
+.services-buttons a#web_development:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470512664-gif/img/icon_services_web_development.gif');
+}
+
+.services-buttons a#branding_and_design:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470416604-gif/img/icon_services_branding_and_design.gif');
+}
+
+.services-buttons a#seo:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470385519-gif/img/icon_services_seo.gif');
+}
+
+.services-buttons a#printing:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470488912-gif/img/icon_services_printing.gif');
+}
+
+.services-buttons a#social_media:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2469461960-gif/img/icon_services_social_media.gif');
+}
+
+.services-buttons a#photography:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470457299-gif/img/icon_services_photography.gif');
+}
+
+.services-buttons a#content_creation:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2469461920-gif/img/icon_services_content_creation.gif');
+}
+
+.services-buttons a#shop_signage:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470512609-gif/img/icon_services_shop_signage.gif');
+}
+
+.services-buttons a#ecommerce:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2464635571-gif/img/icon_services_ecommerce.gif');
+}
+
+.services-buttons a#email_marketing:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470466227-gif/img/icon_services_email_marketing.gif');
+}
+
+.services-buttons a#video_production:before {
+	background-image: url('http://cdn2.hubspot.net/hub/385095/file-2470463999-gif/img/icon_services_video_production.gif');
+}
+
+.services-buttons a:hover,
+.services-buttons a:focus {
+	text-decoration: none;
+	color: #163e68;
+}
+
+.services-buttons a:hover p,
+.services-buttons a:focus p {
+	border-top: 3px solid #163e68;
+}
+
+.services-buttons a img {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+.services-buttons a p {
+	border-top: 3px solid #fff;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-transform: uppercase;
+}

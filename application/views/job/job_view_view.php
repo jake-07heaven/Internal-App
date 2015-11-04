@@ -41,9 +41,9 @@
 				<h3>Employees Assigned</h3>
 				<table>
 				   	<tr class="table-titles"><td>Name</td><td>Join Date</td><td>Salary</td><td>website</td><td>design</td><td>marketing</td><td>seo</td><td>social media</td><td>happiness</td></tr>
-				   <?php foreach ($employees_view as $key) {
+				   <?php if($employees_view != null){foreach ($employees_view as $key) {
 				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->join_date)) . "</td><td>" . $key->salary . "</td><td>" . $key->website . "</td><td>" . $key->design . "</td><td>" . $key->marketing . "</td><td>" . $key->seo . "</td><td>" . $key->social . "</td><td>" . $key->happiness . "</td></tr>";
-		   			}?>
+                                   }}?>
 				</table>
 			</div>
 
@@ -51,9 +51,9 @@
 				<h3>Linked Jobs</h3>
 				<table>
 				   	<tr class="table-titles"><td>Name</td><td>start</td><td>deadline</td><td>price</td><td>cost</td><td>profit</td><td>hours</td><td>taken</td></tr>
-				   <?php foreach ($jobs_view as $key) {
+				   <?php  if($jobs_view != null){foreach($jobs_view as $key) {
 				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/Y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td></tr>";
-		   			}?>
+                                   }}?>
 				</table>
 			</div>
 			<div class="table">
@@ -64,8 +64,8 @@
                                     <?php echo form_open('jobs/update-notes'); ?>
                                     <tr class='hidden'><td><input class='hidden' name="id" readonly="readonly" value="<?php echo $id; ?>"</td></tr>
                                     <tr><td><textarea name="notes" class='notes-write hidden textarea'><?php echo $key->notes; ?></textarea></td></tr>
-                                    <tr><td><div class="edit-notes-job button"><img src="<?php echo $baseurl; ?>/img/edit_icon.svg"></div></td></tr>
-                                    <tr><td><input type="submit" value="Finish" id="<?php echo $id; ?>"class="hidden update-notes-job button"></td></tr>
+                                    <tr><td><div class="edit-notes-job button1"><img src="<?php echo $baseurl; ?>/img/edit_icon.svg"></div></td></tr>
+                                    <tr><td><input type="submit" value="Finish" id="<?php echo $id; ?>"class="hidden update-notes-job button1"></td></tr>
 			   	<?php endforeach; ?>
                                 </table>
 			</div>

@@ -30,6 +30,7 @@ class Jobs extends CI_Controller {
    {
     if($session_data['level'] <= 5)
     {
+        $data['username'] = $session_data['username'];
     $this->update_service_all();
     $data['current_jobs'] = $this->jobs_model->get_current_jobs();
     $data['future_jobs'] = $this->jobs_model->get_future_jobs();
@@ -66,12 +67,30 @@ class Jobs extends CI_Controller {
     foreach ($result3 as $key) {
       $linked_companies_ids = $key->linked_companies;
     }
-    $ids = explode(",",$linked_employees_ids);
-    $Jids = explode(",",$linked_jobs_ids);
+    $ids1 = explode(",",$linked_employees_ids);
+    $Jids1 = explode(",",$linked_jobs_ids);
     $Cids = explode(",", $linked_companies_ids);
-
-      $data['employees_view'] = $this->jobs_model->get_linked_employees($ids);
-      $data['jobs_view'] = $this->jobs_model->get_linked_jobs($Jids);
+    $ids = array_slice($ids1, 1, 1);
+    $Jids = array_slice($Jids1, 2, 1);
+    if (empty($ids) == true)
+    {
+        $data['employees_view'] = null;
+    }
+    else     
+    {
+        $data['employees_view'] = $this->jobs_model->get_linked_employees($ids);
+    }
+    
+    if (empty($Jids) == true)
+    {
+        $data['jobs_view'] = null;
+    }
+    else
+    {
+        $data['jobs_view'] = $this->jobs_model->get_linked_jobs($Jids);
+    }
+      
+      
       $data['companies_view'] = $this->jobs_model->get_linked_companies($Cids);
       if(5 == $session_data['level'])
       {

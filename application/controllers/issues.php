@@ -30,6 +30,7 @@ class issues extends CI_Controller {
    {
     if($session_data['level'] <= 5)
     {
+        $data['username'] = $session_data['username'];
     $data['current_issues'] = $this->issues_model->get_current_issues();
     $data['future_issues'] = $this->issues_model->get_future_issues();
     $data['completed_issues'] = $this->issues_model->get_completed_issues();

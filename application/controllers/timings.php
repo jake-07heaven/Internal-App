@@ -31,6 +31,7 @@ class Timings extends CI_Controller {
     if($session_data['level'] <= 5)
     {
         $this->update_percentages();
+        $data['username'] = $session_data['username'];
     $data['level'] = $session_data['level'];
     $data['timings'] = $this->timings_model->get_timings();
     $data['employees'] = $this->timings_model->get_employees();

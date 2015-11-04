@@ -35,6 +35,10 @@ body,
 	position: relative;
 }
 
+.st-content {
+    overflow-y: hidden;
+}
+
 .st-container {
 	position: relative;
 	overflow: hidden;
@@ -191,5 +195,19 @@ body,
 	padding-left: 300px;
 }
 
-
+.button {
+    background  : none;
+    cursor: pointer;
+    height: 150px;
+    color: #fff;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    display: block;
+    top: 50%;
+    img {
+        height: 100%;
+    }
+}
 

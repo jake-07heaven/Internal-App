@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+	height: 155px; /* .push must be the same height as .footer */
+}
+footer {
+    text-align: center;
+    h4 {
+        color:white;
+    }
+    .footer-top {
+    background-color: $darkBlue;
+    height: 125px;
+    padding: 15px 0;
+    .first-footer-col {
+        border-right: white 1px solid;
+    }
+    }
+    .footer-bot {
+        background: $lightBlue;
+        height: 30px;
+        p {
+            color: white;
+            padding: 6px;
+            margin: 0;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        
+    }
+    .blue {
+        color: $lightBlue;
+    }
+    .grey {
+        color: $grey;
+    }
+}

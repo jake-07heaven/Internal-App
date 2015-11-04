@@ -31,6 +31,7 @@ class hrs extends CI_Controller {
    {
     if($session_data['level'] == 5)
     {
+        $data['username'] = $session_data['username'];
     $data['hr_dis'] = $this->hrs_model->get_discipline();
     $data['hr_gri'] = $this->hrs_model->get_grievance();
     $data['level'] = $session_data['level'];

@@ -1,8 +1,37 @@
-<footer>
-
+<div class="push"></div>
+</div>
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="col-md-3 first-footer-col">
+                <h4>WEEK</h4>
+                <p class="blue">Total: &pound;99999999</p>
+                <p class="grey">Target: &pound;99999999</p>
+            </div>
+            <div class="col-md-3 first-footer-col">
+                <h4>MONTH</h4>
+                <p class="blue">Total: &pound;99999999</p>
+                <p class="grey">Target: &pound;99999999</p>
+            </div>
+            <div class="col-md-3 first-footer-col">
+                <h4>YEAR</h4>
+                <p class="blue">Total: &pound;99999999</p>
+                <p class="grey">Target: &pound;99999999</p>
+            </div>
+            <div class="col-md-3 last-footer-col">
+                <h4>HOURS</h4>
+                <p class="blue">Total: &pound;99999999</p>
+                <p class="grey">Target: &pound;99999999</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bot">
+        <p>&copy; 2015 07 Heaven Design. All rights reserved | Website designed by 07 Heaven Design | Made by yours truly Jake Alder</p>
+    </div>
 </footer>
+    <?php $this->load->view('sidebar/bottom'); ?>
 </body>
-</head>
+
 
 <script src="<?php echo base_url(); ?>js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/classie.js" type="text/javascript"></script>

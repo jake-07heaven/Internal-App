@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html>
     <?php $this->load->view('head'); ?>
-    <div class="two-col dashboard">
-            <div id="st-container" class="st-container">
- 
-    <!-- content push wrapper -->
-    <div class="st-pusher">
-                    <?php $this->load->view('sidebar'); ?>
-        <div class="st-content"><!-- this is the wrapper for the content -->
-            <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
-                <!-- the content -->
-                    <?php $this->load->view('header'); ?>
+    <?php $this->load->view('sidebar/top'); ?>
+    <?php $this->load->view('header'); ?>
     <?php $this->load->view('navigation'); ?>
-						<div class="main clearfix">
-                                                                        <div class="left-col">
+                <div class="main clearfix dashboard">
+                    <div class="left-col">
                         <div class="tab_container">
                             <input id="tab1" type="radio" name="tabs" checked>
                             <label for="tab1"><i class="fa fa-code"></i><span>Jobs</span><div class="circle_ammount"><?php echo $jobs_ammount; ?></div></label>
@@ -36,7 +28,7 @@
                                                     }?>
                                                 <?php endforeach; ?>
                                             <?php endforeach; ?>
-                                            <tr><td><?php echo $key->name; ?></td><td><?php echo date('s/m/y',strtotime($key->deadline_date)) ?></td><td><?php echo $company; ?></td><td><?php echo $contact; ?></td><td><?php echo $number; ?></td></tr>
+                                            <tr><td class='view-button job-view-button' id='<?php echo $key->id ?>'><?php echo $key->name; ?></td><td><?php echo date('s/m/y',strtotime($key->deadline_date)) ?></td><td><?php echo $company; ?></td><td><?php echo $contact; ?></td><td><?php echo $number; ?></td></tr>
                                         <?php endforeach; ?>
                                     </table>
                                 </div>
@@ -59,17 +51,11 @@
                             </section>
                         </div>
                     </div>
+                        <div class="right-col">
+                            
+
+                        </div>
                                                     
-                                                    
-							<div id="st-trigger-effects" class="column">
-                                                            <button id="task_tab" class="button" data-effect="st-effect-7"><img src="<?php echo base_url(); ?>img/task_tab.png"></button>
-							</div>
-						</div><!-- /main -->
-            </div><!-- /st-content-inner -->
-        </div><!-- /st-content -->
- 
-    </div><!-- /st-pusher -->
- 
-</div><!-- /st-container -->
             </div>
+
     <?php $this->load->view('footer'); ?>

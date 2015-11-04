@@ -30,6 +30,7 @@ class Employees extends CI_Controller {
    {
     if($session_data['level'] == 5)
     {
+        $data['username'] = $session_data['username'];
     $data['current_employees'] = $this->employees_model->get_current_employees();
     $data['future_employees'] = $this->employees_model->get_future_employees();
     $data['removed_employees'] = $this->employees_model->get_removed_employees();

@@ -30,6 +30,7 @@ class Services extends CI_Controller {
    {
     if($session_data['level'] <= 5)
     {
+        $data['username'] = $session_data['username'];
     $data['level'] = $session_data['level'];
     $this->load->view('service/services_menu_view', $data);
     }

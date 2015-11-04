@@ -21,3 +21,5 @@
         }
 	</script>
 </head>
+<body onload=display_ct();>
+    <div class="wrapper">

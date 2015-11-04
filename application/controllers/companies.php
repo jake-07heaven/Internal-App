@@ -30,6 +30,7 @@ class Companies extends CI_Controller {
    {
     if($session_data['level'] <= 5)
     {
+        $data['username'] = $session_data['username'];
     $data['current_companies'] = $this->companies_model->get_current_companies();
     $data['future_companies'] = $this->companies_model->get_future_companies();
     $data['level'] = $session_data['level'];

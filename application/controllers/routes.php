@@ -30,6 +30,7 @@ class routes extends CI_Controller {
    {
     if($session_data['level'] <= 5)
     {
+        $data['username'] = $session_data['username'];
     $data['route'] = $this->routes_model->get_routes();
     $data['level'] = $session_data['level'];
     $this->load->view('route/route_overview_view', $data);
