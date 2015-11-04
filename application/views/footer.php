@@ -1,5 +1,6 @@
+    <?php $this->load->view('sidebar/bottom'); ?>
 <div class="push"></div>
-</div>
+
 <footer class="footer">
     <div class="footer-top">
         <div class="container">
@@ -29,7 +30,6 @@
         <p>&copy; 2015 07 Heaven Design. All rights reserved | Website designed by 07 Heaven Design | Made by yours truly Jake Alder</p>
     </div>
 </footer>
-    <?php $this->load->view('sidebar/bottom'); ?>
 </body>
 
 

@@ -202,11 +202,6 @@ body,
   transform: translate3d(-100%, 0, 0) rotateY(0deg); }
 
 /* Effect 8: 3D rotate out */
-/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
-.no-csstransforms3d .st-pusher,
-.no-js .st-pusher {
-  padding-left: 300px; }
-
 .button {
   background: none;
   cursor: pointer;
@@ -383,10 +378,8 @@ label .fa {
 html, body {
   height: 100%; }
 
-.wrapper {
+.st-container {
   min-height: 100%;
-  height: auto !important;
-  /* This line and the next line are not necessary unless you need IE6 support */
   height: 100%;
   margin: 0 auto -155px;
   /* the bottom margin is the negative value of the footer's height */ }
@@ -685,8 +678,8 @@ body {
   padding: 10px 2.5%; }
 
 .circle_ammount {
-  background: red;
-  border: black 1px solid;
+  background: #32a6de;
+  border: #163d68 1px solid;
   border-radius: 50px;
   display: block;
   font-size: 16px;
@@ -695,5 +688,8 @@ body {
   position: relative;
   left: -22px;
   top: -57px; }
+
+.dashboard tr {
+  font-size: 18px; }
 
 /*# sourceMappingURL=styles.css.map */

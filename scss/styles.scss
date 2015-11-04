@@ -316,8 +316,8 @@ text-align: center;
     padding: 10px 2.5%;
 }
 .circle_ammount {
-    background: red;
-    border: black 1px solid;
+    background: $lightBlue;
+    border: $darkBlue 1px solid;
     border-radius: 50px;
     display: block;
     font-size: 16px;
@@ -327,4 +327,8 @@ text-align: center;
     left: -22px;
     top: -57px;
 }
-
+.dashboard {
+    tr {
+        font-size: 18px;
+    }
+}

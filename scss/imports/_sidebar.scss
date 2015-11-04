@@ -187,14 +187,6 @@ body,
 
 /* Effect 8: 3D rotate out */
 
-
-
-/* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
-.no-csstransforms3d .st-pusher,
-.no-js .st-pusher {
-	padding-left: 300px;
-}
-
 .button {
     background  : none;
     cursor: pointer;
