@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
     <?php $this->load->view('head'); ?>
-    <?php $this->load->view('header'); ?>
-    <?php $this->load->view('navigation'); ?>
     <div class="two-col dashboard">
             <div id="st-container" class="st-container">
  
@@ -12,6 +10,8 @@
         <div class="st-content"><!-- this is the wrapper for the content -->
             <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                 <!-- the content -->
+                    <?php $this->load->view('header'); ?>
+    <?php $this->load->view('navigation'); ?>
 						<div class="main clearfix">
                                                                         <div class="left-col">
                         <div class="tab_container">
@@ -62,7 +62,7 @@
                                                     
                                                     
 							<div id="st-trigger-effects" class="column">
-								<button data-effect="st-effect-7">3D rotate in</button>
+                                                            <button id="task_tab" class="button" data-effect="st-effect-7"><img src="<?php echo base_url(); ?>img/task_tab.png"></button>
 							</div>
 						</div><!-- /main -->
             </div><!-- /st-content-inner -->

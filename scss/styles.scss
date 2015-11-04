@@ -521,3 +521,19 @@ label .fa {
   }
 }
 @import 'imports/sidebar';
+
+.button {
+    background  : none;
+    cursor: pointer;
+    height: 150px;
+    color: #fff;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    display: block;
+    top: 50%;
+    img {
+        height: 100%;
+    }
+}
