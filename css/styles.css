@@ -71,7 +71,8 @@ body,
 
 .st-content,
 .st-content-inner {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .st-content {
   overflow-y: hidden; }
@@ -372,23 +373,21 @@ label .fa {
   100% {
     transform: scale(1);
     opacity: 1; } }
-* {
-  margin: 0; }
-
-html, body {
-  height: 100%; }
-
-.st-container {
+.main {
   min-height: 100%;
-  height: 100%;
-  margin: 0 auto -155px;
-  /* the bottom margin is the negative value of the footer's height */ }
+  /* equal to footer height */
+  margin-bottom: -142px; }
 
-.footer, .push {
-  height: 155px;
-  /* .push must be the same height as .footer */ }
+.main:after {
+  content: "";
+  display: block; }
+
+.footer, .main:after {
+  /* .push must be the same height as footer */
+  height: 155px; }
 
 footer {
+  height: 155px;
   text-align: center; }
   footer h4 {
     color: white; }

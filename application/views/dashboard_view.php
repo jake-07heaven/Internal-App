@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <?php $this->load->view('head'); ?>
-    <?php $this->load->view('sidebar/top'); ?>
     <?php $this->load->view('header'); ?>
     <?php $this->load->view('navigation'); ?>
                 <div class="main clearfix dashboard">

@@ -2,7 +2,6 @@
 <?php $baseurl = base_url(); ?>
 <html>
     <?php $this->load->view('head'); ?>
-    <?php $this->load->view('sidebar/top'); ?>
     <?php $this->load->view('header'); ?>
     <?php $this->load->view('navigation'); ?>
     <div class="one-col container routes">

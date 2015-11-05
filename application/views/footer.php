@@ -1,6 +1,5 @@
-    <?php $this->load->view('sidebar/bottom'); ?>
-<div class="push"></div>
 
+<?php $this->load->view('sidebar/bottom'); ?>
 <footer class="footer">
     <div class="footer-top">
         <div class="container">
@@ -31,8 +30,6 @@
     </div>
 </footer>
 </body>
-
-
 <script src="<?php echo base_url(); ?>js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/classie.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/jquery.hotkeys.js" type="text/javascript"></script>
