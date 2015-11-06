@@ -1,19 +1,4 @@
-.main {
-  min-height: 100%;
-  /* equal to footer height */
-    margin-bottom: -142px; 
-}
-.main:after {
-  content: "";
-  display: block;
-}
-.footer, .main:after {
-  /* .push must be the same height as footer */
-    height: 155px; 
-}
-
 footer {
-    height: 155px;
     text-align: center;
     h4 {
         color:white;

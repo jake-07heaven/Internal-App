@@ -3,7 +3,7 @@
     <?php $this->load->view('head'); ?>
     <?php $this->load->view('header'); ?>
     <?php $this->load->view('navigation'); ?>
-                <div class="main clearfix dashboard">
+                <div class="main clearfix dashboard content">
                     <div class="left-col">
                         <div class="tab_container">
                             <input id="tab1" type="radio" name="tabs" checked>

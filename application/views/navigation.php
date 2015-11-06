@@ -31,4 +31,3 @@ $hr = "<a class='".$class."' href='" . base_url() . "hrs/'>HR</a>";
         <a class="<?php if($segUrl['0'] == 'services'){echo 'current';} ?>" href="<?php echo base_url(); ?>services/">Services</a>
         <?php if($level == 5) {echo $hr;}?>
 </nav>
-    <?php $this->load->view('sidebar/top'); ?>

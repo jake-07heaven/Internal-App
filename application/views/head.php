@@ -22,3 +22,4 @@
 	</script>
 </head>
 <body onload=display_ct();>
+        <?php $this->load->view('sidebar/top'); ?>

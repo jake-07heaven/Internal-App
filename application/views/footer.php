@@ -1,6 +1,9 @@
-
-<?php $this->load->view('sidebar/bottom'); ?>
-<footer class="footer">
+                                        <div id="st-trigger-effects" class="column">
+                        <button id="task_tab" class="button" data-effect="st-effect-7"><img src="<?php echo base_url(); ?>img/task_tab.png"></button>
+                    </div>
+                            </div><!-- /st-content-inner -->
+                                    </div><!-- /st-content -->
+<footer id="footer" class="footer">
     <div class="footer-top">
         <div class="container">
             <div class="col-md-3 first-footer-col">
@@ -29,16 +32,18 @@
         <p>&copy; 2015 07 Heaven Design. All rights reserved | Website designed by 07 Heaven Design | Made by yours truly Jake Alder</p>
     </div>
 </footer>
+<?php $this->load->view('sidebar/bottom'); ?>
 </body>
 <script src="<?php echo base_url(); ?>js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/classie.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/jquery.hotkeys.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/sidebarEffects.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/modernizr.custom.js" type="text/javascript"></script>
+
 <script>
     $(document).bind('keydown', 't', function() {
         var open = $('.st-container').attr('class').split(' ').pop();
-        if (open != "st-menu-open")
+        if (open !== "st-menu-open")
         {
                 $('#task_tab').trigger("click");
         }
