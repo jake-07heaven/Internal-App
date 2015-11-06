@@ -38,8 +38,10 @@
 <script src="<?php echo base_url(); ?>js/classie.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/jquery.hotkeys.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/sidebarEffects.js" type="text/javascript"></script>
-<script src="<?php echo base_url(); ?>js/modernizr.custom.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>js/stickyfooter.js" type="text/javascript"></script>
 
+<script src="<?php echo base_url(); ?>js/modernizr.custom.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>js/sidebarContent.js" type="text/javascript"></script>
 <script>
     $(document).bind('keydown', 't', function() {
         var open = $('.st-container').attr('class').split(' ').pop();

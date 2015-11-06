@@ -1,9 +1,17 @@
 $(document).ready(function(){
         $(window).resize(function(){
-                    var footerHeight = $('.footer').outerHeight();
-                    var stickFooterPush = $('.push').height(footerHeight);
-
-                $('.wrapper').css({'marginBottom':'-' + footerHeight + 'px'});
+                    var body = $('body').height();
+                    var content = $(".st-content-inner").height();
+                    content = content + 155;
+                    if (content > body)
+                    {
+                        $(".st-content").css("min-height", content);
+                    }
+                    else {
+                         $(".st-content").css("min-height", body);
+                    }
+                   
+                  
             });
 
         $(window).resize();
