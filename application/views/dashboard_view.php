@@ -3,9 +3,6 @@
     <?php $this->load->view('head'); ?>
     <?php $this->load->view('header'); ?>
     <?php $this->load->view('navigation'); ?>
-    <div class="content">
-        Hello
-    </div>
                 <div class="main clearfix dashboard">
                     <div class="left-col">
                         <div class="tab_container">
