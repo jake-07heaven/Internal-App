@@ -93,6 +93,7 @@ $route['timings/time'] = 'timings/overview';
 $route['timings/time/(:num)/(:any)'] = "timings/time/$1/$2";
 
 $route['admin'] = 'admin';
+$route['tasks'] = 'tasks';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

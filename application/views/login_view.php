@@ -1,6 +1,5 @@
 <html>
 	<?php $this->load->view('head'); ?>
-		<?php $this->load->view('header'); ?>
 		<div class="container">
 			<div class="login">
 				<h1>07 Heaven Login</h1>

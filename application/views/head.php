@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <!--<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7578754/725886/css/fonts.css">-->
 	<link href='https://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/styles.css">
         <script src="<?php echo base_url(); ?>js/moment.js"></script>
 	<script type="text/javascript"> 
@@ -22,4 +23,3 @@
 	</script>
 </head>
 <body onload=display_ct();>
-        <?php $this->load->view('sidebar/top'); ?>

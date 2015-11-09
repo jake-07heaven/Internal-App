@@ -6,22 +6,22 @@
 <footer id="footer" class="footer">
     <div class="footer-top">
         <div class="container">
-            <div class="col-md-3 first-footer-col">
+            <div class="col-sm-3 first-footer-col">
                 <h4>WEEK</h4>
                 <p class="blue">Total: &pound;99999999</p>
                 <p class="grey">Target: &pound;99999999</p>
             </div>
-            <div class="col-md-3 first-footer-col">
+            <div class="col-sm-3 first-footer-col">
                 <h4>MONTH</h4>
                 <p class="blue">Total: &pound;99999999</p>
                 <p class="grey">Target: &pound;99999999</p>
             </div>
-            <div class="col-md-3 first-footer-col">
+            <div class="col-sm-3 first-footer-col">
                 <h4>YEAR</h4>
                 <p class="blue">Total: &pound;99999999</p>
                 <p class="grey">Target: &pound;99999999</p>
             </div>
-            <div class="col-md-3 last-footer-col">
+            <div class="col-sm-3 last-footer-col">
                 <h4>HOURS</h4>
                 <p class="blue">Total: &pound;99999999</p>
                 <p class="grey">Target: &pound;99999999</p>
@@ -38,10 +38,17 @@
 <script src="<?php echo base_url(); ?>js/classie.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/jquery.hotkeys.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/sidebarEffects.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>js/jquery-ui.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/stickyfooter.js" type="text/javascript"></script>
-
 <script src="<?php echo base_url(); ?>js/modernizr.custom.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/sidebarContent.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+    $( "#sortable1, #sortable2" ).sortable({
+      connectWith: ".connectedSortable"
+    }).disableSelection();
+  });
+</script>
 <script>
     $(document).bind('keydown', 't', function() {
         var open = $('.st-container').attr('class').split(' ').pop();

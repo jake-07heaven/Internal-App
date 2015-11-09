@@ -1,4 +1,4 @@
-
+        <?php $this->load->view('sidebar/top'); ?>
 <header id="header">
 		<div class="container">                            
 			<a href="<?php echo base_url(); ?>dashboard"><img class="logo" src="http://cdn2.hubspot.net/hub/385095/file-1148947077-png/img/logo.png" alt="07 Heaven Digital Marketing"></a>
