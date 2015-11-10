@@ -10,12 +10,15 @@
 	$profit = $key->profit;
 	$taken = $key->taken;
 }?>
+<?php foreach ($job_info as $key) {
+        $company = $key->linked_companies;
+}?>
 <html>
 	<?php $this->load->view('head'); ?>
 	 	<?php $this->load->view('header'); ?>
 	 	<?php $this->load->view('navigation'); ?>
 	 	<div class="single_page one-col">
-	 		<div class="section-header"><h2><?php echo $name; ?></h2></div>
+	 		<div class="section-header"><h2><?php echo $name; ?></h2><br><p><?php echo $company ?></p></div>
 	 		<div class="table">
 			 	<table>
 					<tr class="table-titles"><td>Start</td><td>Deadline</td><td>price</td><td>cost</td><td>profit</td></tr>

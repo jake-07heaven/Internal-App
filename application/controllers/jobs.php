@@ -35,6 +35,7 @@ class Jobs extends CI_Controller {
     $data['current_jobs'] = $this->jobs_model->get_current_jobs();
     $data['future_jobs'] = $this->jobs_model->get_future_jobs();
     $data['completed_jobs'] = $this->jobs_model->get_completed_jobs();
+    $data['jobs_info'] = $this->jobs_model->get_jobs_info();
     $data['level'] = $session_data['level'];
     $this->load->view('job/job_overview_view', $data);
     }

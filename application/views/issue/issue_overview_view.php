@@ -10,7 +10,7 @@
 	<?php endif; ?>
         <div class="table">
             <h2>Open</h2>
-            <table>
+            <table class="sortable">
                 <tr class="table-titles"><td>Company</td><td>Service</td><td>Issue</td><td>Date</td><td>Priority</td><td>resolved</td><td>cause</td><td>client feeling</td></tr>
                 <?php foreach ($current_issues as $key) {
                     if($level == 5) {
@@ -26,7 +26,7 @@
         </div>
         <div class="table">
             <h2>Resolved</h2>
-            <table>
+            <table class="sortable">
                 <tr class="table-titles"><td>Company</td><td>Service</td><td>Issue</td><td>Date</td><td>Priority</td><td>resolved</td><td>cause</td><td>client feeling</td></tr>
                 <?php foreach ($completed_issues as $key) {
                    if($level == 5) {

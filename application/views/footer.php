@@ -40,6 +40,7 @@
 <script src="<?php echo base_url(); ?>js/jquery.hotkeys.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/sidebarEffects.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/jquery-ui.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>js/sorttable.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/modernizr.custom.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/sidebarContent.js" type="text/javascript"></script>
 

@@ -16,19 +16,23 @@
                             <section id="content1" class="tab-content">
                                 <h3>Ongoing Jobs</h3>
                                 <div class="table">
-                                    <table>
+                                    <table class="sortable">
                                         <tr class="table-titles"><td>Job</td><td>deadline</td><td>company</td><td>contact name</td><td>contact number</td></tr>
                                         <?php foreach($ongoing_jobs as $key) : ?>
-                                            <?php foreach($companies as $comp) : ?>
-                                                <?php foreach($ongoing_jobs_extra as $jobs) : ?>
-                                                    <?php if($jobs->linked_companies == $comp->name) {
-                                                        $contact = $comp->contact;
-                                                        $number = $comp->number;
-                                                        $company = $comp->name;
-                                                    }?>
-                                                <?php endforeach; ?>
-                                            <?php endforeach; ?>
-                                            <tr><td class='view-button job-view-button' id='<?php echo $key->id ?>'><?php echo $key->name; ?></td><td><?php echo date('s/m/y',strtotime($key->deadline_date)) ?></td><td><?php echo $company; ?></td><td><?php echo $contact; ?></td><td><?php echo $number; ?></td></tr>
+                                            <?php foreach($ongoing_jobs_extra as $jobs){
+                                                    if ($key->id == $jobs->id)
+                                                    {
+                                                        $company = $jobs->linked_companies;
+                                                    }
+                                                } ?>
+                                            <?php foreach($companies as $comp){
+                                                if ($comp->name == $company) {
+                                                    $contact = $comp->contact;
+                                                    $number = $comp->number;
+                                                    $company = $comp->name;
+                                                }
+                                            } ?>
+                                            <tr><td class='view-button job-view-button' id='<?php echo $key->id ?>'><?php echo $key->name; ?></td><td><?php echo date('d/m/y',strtotime($key->deadline_date)) ?></td><td><?php echo $company; ?></td><td><?php echo $contact; ?></td><td><?php echo $number; ?></td></tr>
                                         <?php endforeach; ?>
                                     </table>
                                 </div>
@@ -45,7 +49,7 @@
                                                     $company = $comp->name;
                                                     $number = $comp->number;
                                                 }}?>
-                                            <tr><td><?php echo $key->issue; ?></td><td><?php echo date('s/m/y',strtotime($key->date)) ?></td><td><?php echo $company; ?></td><td><?php echo $contact; ?></td><td><?php echo $number; ?></td></tr>
+                                            <tr><td><?php echo $key->issue; ?></td><td><?php echo date('d/m/y',strtotime($key->date)) ?></td><td><?php echo $company; ?></td><td><?php echo $contact; ?></td><td><?php echo $number; ?></td></tr>
                                         <?php endforeach; ?>
                                     </table>
                             </section>

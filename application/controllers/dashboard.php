@@ -23,7 +23,14 @@ class Dashboard extends CI_Controller {
          $ids[] = $key->id;
      }
      $data['jobs_ammount'] = count($ids);
+     if (empty($ids) != true)
+     {
      $data['ongoing_jobs_extra'] = $this->get_ongoing_jobs_extra($ids);
+     }
+     else
+     {
+         $data['ongoing_jobs_extra'] = null;
+     }
      $data['ongoing_issues'] = $this->get_ongoing_issues();
      $data['companies'] = $this->get_companies();
      $data['issues_ammount'] = count($data['ongoing_issues']);

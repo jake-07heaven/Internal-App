@@ -393,12 +393,14 @@ label .fa {
   .task-sidebar ol li {
     overflow: hidden; }
   .task-sidebar ol div.task_side_content {
-    height: 150px;
-    margin: 15px 0;
+    height: 255px;
+    margin: 0;
+    overflow: hidden;
     transition: all 0.7s ease-out; }
+    .task-sidebar ol div.task_side_content textarea {
+      max-height: 150px; }
   .task-sidebar ol div.unextended {
     height: 0;
-    margin: 0;
     overflow: hidden;
     transition: all 0.7s ease-out; }
   .task-sidebar ol .employees_list {
@@ -406,9 +408,10 @@ label .fa {
     border-radius: 4px;
     float: left;
     margin: 5px;
-    min-height: 25px;
+    height: 150px;
     width: 45%;
-    padding: 5px 0; }
+    padding: 5px 0;
+    overflow-y: scroll; }
 .task-sidebar .invis {
   opacity: 0; }
 .task-sidebar .vis {
@@ -570,6 +573,8 @@ body {
   .table .table-titles {
     color: #32a6de;
     text-transform: uppercase; }
+    .table .table-titles td {
+      cursor: pointer; }
 
 .table-input {
   width: 100%; }
@@ -582,13 +587,13 @@ body {
   text-align: center; }
   .single_page .section-header h2 {
     color: #163d68;
-    font-size: 35px;
-    margin: 10px 0 10px 0;
+    font-size: 32px;
+    margin: 10px 0 5px 0;
     text-transform: uppercase; }
   .single_page .section-header p {
     color: #163d68;
-    font-size: 14px;
-    margin: 0 0 10px 0;
+    font-size: 30px;
+    margin: 0 0 20px 0;
     text-transform: capitalize; }
 
 .section-header-input {

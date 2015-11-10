@@ -162,8 +162,11 @@ body {
         text-align: center;
     } 
     .table-titles {
-    color: #32a6de;
-    text-transform: uppercase;
+        color: #32a6de;
+        text-transform: uppercase;
+        td {
+            cursor: pointer;
+        }
     }
 }
 .table-input {
@@ -179,15 +182,15 @@ body {
     .section-header {
         text-align: center;
         h2 {
-            color: #163d68;
-            font-size: 35px;
-            margin: 10px 0 10px 0;
+            color: $darkBlue;
+            font-size: 32px;
+            margin: 10px 0 5px 0;
             text-transform: uppercase;
         }
         p {
-           color: #163d68;
-            font-size: 14px;
-            margin: 0 0 10px 0;
+           color: $darkBlue;
+            font-size: 30px;
+            margin: 0 0 20px 0;
             text-transform: capitalize;
         }
     }	
