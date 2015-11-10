@@ -10,6 +10,10 @@ $(document).ready(function(){
                     else {
                          $(".st-content").css("min-height", body);
                     }
+                    
+                    $(".footer").css("height", "155px");
+                    $(".footer").css("top", "0");
+
                    
                   
             });

@@ -1,2 +1,62 @@
-task-page {
+.task-sidebar {
+    h3 {
+        color: $darkBlue;
+        text-transform: capitalize;
+        background: lightblue;
+        padding: 10px;
+        font-size: 18px;
+        margin: 5px 0;
+    }
+    .task_buttons {
+        width: 100%;
+        display: block;
+    }
+    .task_button {
+        float: left;
+        width: 45%;
+        padding: 10px 5%;
+        background: $lightBlue;
+        color: white;
+        text-align: center;
+        margin: 10px 5px;
+        cursor: pointer;
+    }
+    select, input, textarea {
+        width: 100%;
+        padding: 3px 1;
+        margin: 5px 0;
+    }
+    ol {
+        list-style: none;
+        li {
+            overflow: hidden;
+        }
+        div.task_side_content {
+            height: 150px;
+            margin: 15px 0;
+            transition: all 0.7s ease-out;
+        }
+        div.unextended {
+            height: 0;
+            margin: 0;
+            overflow: hidden;
+            transition: all 0.7s ease-out;
+        }
+        .employees_list {
+            border: 1px #ECE solid;
+            border-radius: 4px;
+            float: left;
+            margin: 5px;
+            min-height: 25px;
+            width: 45%;
+            padding: 5px 0;
+        }
+    }
+    .invis {
+        opacity: 0;
+    }
+    .vis {
+        opacity: 1;
+    }
 }
+

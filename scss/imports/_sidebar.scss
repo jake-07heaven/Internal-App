@@ -13,15 +13,6 @@ a {
 	clear: both;
 }
 
-
-/* Component.css */
-*,
-*:after,
-*::before {
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 html,
 body {
 	height: 100%;
@@ -194,9 +185,10 @@ body {
     border: none;
     margin: 0px;
     padding: 0px;
-    position: fixed;
+    position: absolute;
     display: block;
-    top: 50%;
+    top: 250px;
+    transition: all 0.1s ease-out;
     img {
         height: 100%;
     }

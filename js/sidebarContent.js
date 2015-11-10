@@ -1,8 +1,10 @@
 $(document).ready(function(){
     $(window).scroll(function(){
-        console.log($(window).scrollTop());
         var value = $(window).scrollTop();
-        value = value + 10;
+        value = value + 0;
         $(".content").css("top", value);
-    })
-})
+        
+        value = value + 250;
+        $(".button").css("top", value);
+    });
+});
