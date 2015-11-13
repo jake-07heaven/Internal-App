@@ -43,8 +43,33 @@
 <script src="<?php echo base_url(); ?>js/sorttable.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/modernizr.custom.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/sidebarContent.js" type="text/javascript"></script>
+<script>
+$( ".task_input" ).keyup(function() {
+    var val = $(this).val();
+    var lastClass = $(this).attr('class').split(' ').pop();
+    lastClass = "." + lastClass;
+    $(lastClass).val(val);
+});
+$( ".task_date" ).change(function() {
+    var val = $(this).val();
+    var lastClass = $(this).attr('class').split(' ').pop();
+    lastClass = "." + lastClass;
+    $(lastClass).val(val);
+});
+</script>
 
-
+<script>
+$( ".task_select" ).change(function () {
+    $( ".task_select option:selected" ).each(function() {
+        selectedval = $(this).val();
+        var jobandcomp = $(this).text().split(' - ');
+        $('.task-job').val("Job: " + jobandcomp[1]);
+        $('.task-comp').val("Company: " + jobandcomp[0]);
+    });
+    $(this).val(selectedval);
+  })
+.change();
+</script>
 <script>
 $('.task_next').click(function() {
     
@@ -55,6 +80,22 @@ $('.task_next').click(function() {
     $(this).parent().parent().parent().siblings(lastClass).children('div').toggleClass('unextended');
     
     $(this).siblings('.task_side_content').toggleClass('unextended');
+    
+    id_list = "";
+    
+    $('.employees-inputs').remove();
+    $('.added_employees li').each(function(i)
+    {
+       var val = $(this).text();
+       var id = $(this).val() + ',';
+       id_list += id;
+       $('.employees-list').append('<li class="quarter employees-inputs"><input readonly="readonly" value="'+val+'"</li>');
+    });
+    if (lastClass === '.finish')
+    {
+        $('#submit').trigger("click");
+    }
+    $('.input_ids').val(id_list);
 });
 $('.task_back').click(function() {
     

@@ -4,7 +4,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 20-Oct-2014, 15:28:23
+    Created on : 20-Oct-2014, 15:28:2
     Author     : Jake
 */
 @import 'imports/varibles';
@@ -19,6 +19,8 @@ and open the template in the editor.
     position: absolute;
     display: block;
     top: 0;
+    width: 100%;
+    text-align: center;
     left: 0;
     z-index: 100;
     transition: all 0.7s ease-out;

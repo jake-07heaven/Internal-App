@@ -95,3 +95,14 @@
 	margin-top: 10px;
 	text-transform: uppercase;
 }
+
+.service {
+    text-align: center;
+    img {
+        width: 50%;
+    }
+    h5 {
+        color: $darkBlue;
+        font-size: 18px;
+    }
+}

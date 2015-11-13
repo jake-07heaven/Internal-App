@@ -41,7 +41,7 @@
 				   	if ($job_potential != null)
 				   {
 				   foreach ($job_potential as $key) {
-				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
+				   	echo "<tr><td>" . $key->name . "</td><td>" . date('d/m/y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
 				   }}?>
 				</table>
 				</div>
@@ -53,7 +53,7 @@
 				   if ($job_ongoing != null)
 				   {
 				   foreach ($job_ongoing as $key) {
-				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
+				   	echo "<tr><td>" . $key->name . "</td><td>" . date('d/m/y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
 				   }}?>
 				</table>
 				</div>
@@ -65,7 +65,7 @@
 				   if ($job_completed != null)
 				   {
 				   foreach ($job_completed as $key) {
-				   	echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
+				   	echo "<tr><td>" . $key->name . "</td><td>" . date('d/m/y',strtotime($key->start_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td></tr>";
 				   }}?>
 				</table>
 			</div>

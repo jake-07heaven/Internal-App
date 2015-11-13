@@ -32,6 +32,8 @@ class Services extends CI_Controller {
     {
         $data['username'] = $session_data['username'];
     $data['level'] = $session_data['level'];
+         $data['id'] = $session_data['id'];
+     $data['linked_tasks']=$this->get_tasks($data['id']);
     $this->load->view('service/services_menu_view', $data);
     }
     else {
@@ -114,5 +116,34 @@ class Services extends CI_Controller {
   $this->services_model->update_service_info($data['id'], $data1);
 
   redirect('services/overview', 'refresh');
+ }
+ function get_tasks($id)
+ {
+     $this->load->model('tasks_model','',TRUE);
+     $data = $this->tasks_model->get_tasks_emp();
+     $linked_tasks_ids = array();
+     foreach($data as $task)
+     {
+        $ids = explode(',', $task->linked_employees);
+        array_pop($ids);
+        foreach($ids as $ids_single)
+        {
+            if ($ids_single == $id)
+            {
+                $linked_tasks_ids[] = $task->id;
+            }
+        }
+     }
+     
+     
+     if (empty($linked_tasks_ids) != True)
+     {
+     $data = $this->tasks_model->get_tasks_linked($linked_tasks_ids);
+     }
+     else
+     {
+         $data = null;
+     }
+     return $data;
  }
 }

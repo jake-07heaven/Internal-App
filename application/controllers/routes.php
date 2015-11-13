@@ -33,6 +33,8 @@ class routes extends CI_Controller {
         $data['username'] = $session_data['username'];
     $data['route'] = $this->routes_model->get_routes();
     $data['level'] = $session_data['level'];
+         $data['id'] = $session_data['id'];
+     $data['linked_tasks']=$this->get_tasks($data['id']);
     $this->load->view('route/route_overview_view', $data);
     }
    }
@@ -275,5 +277,33 @@ class routes extends CI_Controller {
     $this->routes_model->update_route($website, $seo,$refferals,$newsletter,$social,$networking,$presentations,$e_shots,$partners,$shop_front,$pr,$events,$hubspot,$pph);
 
     redirect('routes/overview', 'refresh');
+ }
+ function get_tasks($id)
+ {
+     $this->load->model('tasks_model','',TRUE);
+     $data = $this->tasks_model->get_tasks_emp();
+     $linked_tasks_ids = array();
+     foreach($data as $task)
+     {
+        $ids = explode(',', $task->linked_employees);
+        array_pop($ids);
+        foreach($ids as $ids_single)
+        {
+            if ($ids_single == $id)
+            {
+                $linked_tasks_ids[] = $task->id;
+            }
+        }
+     }
+          
+     if (empty($linked_tasks_ids) != True)
+     {
+     $data = $this->tasks_model->get_tasks_linked($linked_tasks_ids);
+     }
+     else
+     {
+         $data = null;
+     }
+     return $data;
  }
 }

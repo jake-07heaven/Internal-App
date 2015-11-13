@@ -37,7 +37,7 @@
             overflow: hidden;
             transition: all 0.7s ease-out;
             textarea {
-                max-height: 150px;
+                height: 150px;
             }
         }
         div.unextended {
@@ -54,13 +54,62 @@
             width: 45%;
             padding: 5px 0;
             overflow-y: scroll;
+            li {
+                background: $lightBlue;
+                padding: 3px;
+                margin: 3px 0;
+                color: white;
+                font-weight: 500;
+                cursor: move;
+                
+            }
         }
     }
-    .invis {
-        opacity: 0;
-    }
-    .vis {
-        opacity: 1;
+}
+.no-box {
+    border: none;
+    input, textarea {
+        border: none;
+        background: none;
+        max-height: 100px;
     }
 }
+.center input {
+    text-align: center;
+    font-size: 24px;
+}
+.half {
+    width: 50%;
+    float: left;
+}
+.full {
+    width: 100%;
+}
 
+.task-section {
+    border-bottom: #ECE 1px solid;
+    margin: 10px 0;
+    padding: 15px 0;
+    min-height: 75px;
+}
+.quarter {
+        text-align: center;
+    list-style: none;
+    font-size: 18px;
+    color: $darkBlue;
+    width: 25%;
+    float: left;
+}
+.task-side {
+    width: 250px;
+    list-style: none;
+    margin: 10px !important;
+   
+    h6 {
+        color: white;
+        float: left;
+        width: 50%;
+        font-weight: 300;
+        font-size: 18px;
+    }
+}

@@ -18,7 +18,7 @@
                     <?php foreach ($employee_info as $key) {
                         echo "<tr><td>" . $key->attendance . "%</td><td>" . $key->late . "%</td><td>" . $key->holiday_days . "</td><td>" . $key->holiday_taken . "</td><td>" . $userSalary . "</td></tr>";
                         echo "<tr class='table-titles'><td>last kpi</td><td>kpi</td><td>total kpi</td><td>join date</td><td>days</td></tr>";
-                        echo "<tr><td>" . $key->last_kpi . "%</td><td>" . $key->kpi . "%</td><td>" . $key->total_kpi . "%</td><td>" . date('s/m/y',strtotime($userjoin_date)) . "</td><td>" . $key->days . "</td></tr>";
+                        echo "<tr><td>" . $key->last_kpi . "%</td><td>" . $key->kpi . "%</td><td>" . $key->total_kpi . "%</td><td>" . date('d/m/y',strtotime($userjoin_date)) . "</td><td>" . $key->days . "</td></tr>";
                     }?>
             </table>
         </div>
@@ -31,9 +31,8 @@
             </table>
         </div>
         <div class="table">
-            <h3>skill level</h3>
             <table>
-                <tr class="table-titles"><td>Print</td><td>website</td><td>design</td><td>marketing</td><td>video</td><td>seo</td><td>social media</td></tr>
+                <tr><td><img src="<?php echo $baseurl; ?>img/services_icon/service-icon-print.svg"></td><td><img src="<?php echo $baseurl; ?>img/services_icon/service-icon-web.svg"></td><td><img src="<?php echo $baseurl; ?>img/services_icon/service-icon-design.svg"></td><td><img src="<?php echo $baseurl; ?>img/services_icon/service-icon-marketing.svg"></td><td><img src="<?php echo $baseurl; ?>img/services_icon/service-icon-video.svg"></td><td><img src="<?php echo $baseurl; ?>img/services_icon/service-icon-seo.svg"></td><td><img src="<?php echo $baseurl; ?>img/services_icon/service-icon-social.svg"></td></tr>
                 <?php foreach ($employee_level as $key) {
                     echo "<tr><td>" . $key->print . "</td><td>" . $key->website . "</td><td>" . $key->design . "</td><td>" . $key->marketing . "</td><td>" . $key->video . "</td><td>" . $key->seo . "</td><td>" . $key->social . "</td></tr>";
                 }?>
@@ -47,7 +46,7 @@
                     if ($hr_data != null)
                {
                foreach ($hr_data as $key) {
-                    echo "<tr><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->date)) . "</td><td>" . $key->level . "</td><td>" . $key->issue . "</td><td>" . $key->meeting . "</td><td>" . $key->letter . "</td><td>" . $key->followed_up . "</td></tr>";
+                    echo "<tr><td>" . $key->name . "</td><td>" . date('d/m/y',strtotime($key->date)) . "</td><td>" . $key->level . "</td><td>" . $key->issue . "</td><td>" . $key->meeting . "</td><td>" . $key->letter . "</td><td>" . $key->followed_up . "</td></tr>";
                 }}?>
             </table>
         </div>
@@ -81,4 +80,5 @@
                     echo "<div id='notes' class='textarea'>" . $key->notes . "</div>";
             }?>
         </div>
-	 	</div>
+    </div>
+    <?php $this->load->view('footer'); ?>

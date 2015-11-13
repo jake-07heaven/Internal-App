@@ -25,15 +25,17 @@ class Companies extends CI_Controller {
  }
  function overview()
  {
-      $session_data = $this->session->userdata('logged_in');
+    $session_data = $this->session->userdata('logged_in');
    if($this->session->userdata('logged_in'))
    {
     if($session_data['level'] <= 5)
     {
-        $data['username'] = $session_data['username'];
+    $data['username'] = $session_data['username'];
     $data['current_companies'] = $this->companies_model->get_current_companies();
     $data['future_companies'] = $this->companies_model->get_future_companies();
-    $data['level'] = $session_data['level'];
+    $data['level'] = $session_data['level'];     $data['id'] = $session_data['id'];
+     $data['linked_tasks']=$this->get_tasks($data['id']);
+    
     $this->load->view('company/company_overview_view', $data);
     }
     else {
@@ -233,5 +235,34 @@ class Companies extends CI_Controller {
   $this->companies_model->update_company($data['id'], $data1, $data2);
 
   redirect('companies/overview', 'refresh');
+ }
+ function get_tasks($id)
+ {
+     $this->load->model('tasks_model','',TRUE);
+     $data = $this->tasks_model->get_tasks_emp();
+     $linked_tasks_ids = array();
+     foreach($data as $task)
+     {
+        $ids = explode(',', $task->linked_employees);
+        array_pop($ids);
+        foreach($ids as $ids_single)
+        {
+            if ($ids_single == $id)
+            {
+                $linked_tasks_ids[] = $task->id;
+            }
+        }
+     }
+     
+     
+     if (empty($linked_tasks_ids) != True)
+     {
+     $data = $this->tasks_model->get_tasks_linked($linked_tasks_ids);
+     }
+     else
+     {
+         $data = null;
+     }
+     return $data;
  }
 }

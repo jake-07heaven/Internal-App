@@ -26,7 +26,7 @@
                            $linked = $job->linked_companies;
                        }
                    }
-                    echo "<tr><td class='view-button job-view-button' id='" . $key->id . "'>" . $linked . "</td><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td><td>".$button."</td></tr>";
+                    echo "<tr><td class='view-button job-view-button' id='" . $key->id . "'>" . $linked . "</td><td>" . $key->name . "</td><td>" . date('d/m/y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td><td>".$button."</td></tr>";
 		    }?>
             </table>
         </div>
@@ -48,7 +48,7 @@
                            $linked = $job->linked_companies;
                        }
                    }
-                    echo "<tr><td class='view-button job-view-button' id='" . $key->id . "'>" . $linked . "</td><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td><td>".$button."</td></tr>";
+                    echo "<tr><td class='view-button job-view-button' id='" . $key->id . "'>" . $linked . "</td><td>" . $key->name . "</td><td>" . date('d/m/y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td><td>".$button."</td></tr>";
 		    }?>
             </table>
         </div>
@@ -70,7 +70,7 @@
                            $linked = $job->linked_companies;
                        }
                    }
-                    echo "<tr><td class='view-button job-view-button' id='" . $key->id . "'>" . $linked . "</td><td>" . $key->name . "</td><td>" . date('s/m/y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td><td>".$button."</td></tr>";
+                    echo "<tr><td class='view-button job-view-button' id='" . $key->id . "'>" . $linked . "</td><td>" . $key->name . "</td><td>" . date('d/m/y',strtotime($key->deadline_date)) . "</td><td>" . $key->price . "</td><td>" . $key->cost . "</td><td>" . $key->profit . "</td><td>" . $key->hours . "</td><td>" . $key->taken . "</td><td>" . $key->working_on . "</td><td>" . $key->status . "</td><td>".$button."</td></tr>";
 		    }?>
             </table>
         </div>

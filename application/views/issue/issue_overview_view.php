@@ -20,7 +20,7 @@
                    {
                         $button = "";
                    }
-                    echo "<tr><td class='view-button issue-view-button' id='" . $key->id . "'>" . $key->company . "</td><td>" . $key->service . "</td><td>" . $key->issue . "</td><td>" . date('s/m/y',strtotime($key->date)) . "</td><td>" . $key->priority . "</td><td>" . $key->resolved . "</td><td>" . $key->cause . "</td><td>" . $key->client_feeling . "</td><td>" . $button . "</td></tr>";
+                    echo "<tr><td class='view-button issue-view-button' id='" . $key->id . "'>" . $key->company . "</td><td>" . $key->service . "</td><td>" . $key->issue . "</td><td>" . date('d/m/y',strtotime($key->date)) . "</td><td>" . $key->priority . "</td><td>" . $key->resolved . "</td><td>" . $key->cause . "</td><td>" . $key->client_feeling . "</td><td>" . $button . "</td></tr>";
                 }?>
             </table>
         </div>
@@ -36,7 +36,7 @@
                    {
                         $button = "";
                    }
-                    echo "<tr><td class='view-button issue-view-button' id='" . $key->id . "'>" . $key->company . "</td><td>" . $key->service . "</td><td>" . $key->issue . "</td><td>" . date('s/m/y',strtotime($key->date)) . "</td><td>" . $key->priority . "</td><td>" . $key->resolved . "</td><td>" . $key->cause . "</td><td>" . $key->client_feeling . "</td><td>".$button."</td></tr>";
+                    echo "<tr><td class='view-button issue-view-button' id='" . $key->id . "'>" . $key->company . "</td><td>" . $key->service . "</td><td>" . $key->issue . "</td><td>" . date('d/m/y',strtotime($key->date)) . "</td><td>" . $key->priority . "</td><td>" . $key->resolved . "</td><td>" . $key->cause . "</td><td>" . $key->client_feeling . "</td><td>".$button."</td></tr>";
                 }?>
             </table>
         </div>

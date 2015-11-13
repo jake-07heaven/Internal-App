@@ -1,11 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+ini_set("display_errors", 1);
+error_reporting(E_ALL);
 session_start(); //we need to call PHP's session object to access it through CI
 class Dashboard extends CI_Controller {
 
  function __construct()
  {
    parent::__construct();
-
  }
 
  function index()
@@ -16,8 +17,10 @@ class Dashboard extends CI_Controller {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
      $data['level'] = $session_data['level'];
+     $data['id'] = $session_data['id'];
+     $data['linked_tasks']=$this->get_tasks($data['id']);
      $data['ongoing_jobs'] = $this->get_ongoing_jobs();
-     $ids =array();
+     $ids = array();
      foreach($data['ongoing_jobs'] as $key)
      {
          $ids[] = $key->id;
@@ -70,6 +73,35 @@ class Dashboard extends CI_Controller {
  {
      $this->load->model('jobs_model','',TRUE);
      $data = $this->jobs_model->get_ongoing_jobs_extra($ids);
+     return $data;
+ }
+ function get_tasks($id)
+ {
+     $this->load->model('tasks_model','',TRUE);
+     $data = $this->tasks_model->get_tasks_emp();
+     $linked_tasks_ids = array();
+     foreach($data as $task)
+     {
+        $ids = explode(',', $task->linked_employees);
+        array_pop($ids);
+        foreach($ids as $ids_single)
+        {
+            if ($ids_single == $id)
+            {
+                $linked_tasks_ids[] = $task->id;
+            }
+        }
+     }
+     
+     
+     if (empty($linked_tasks_ids) != True)
+     {
+     $data = $this->tasks_model->get_tasks_linked($linked_tasks_ids);
+     }
+     else
+     {
+         $data = null;
+     }
      return $data;
  }
 }

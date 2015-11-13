@@ -97,6 +97,14 @@ Class jobs_model extends CI_Model
    $query = $this->db->get();
    return $query->result();
  }
+ function get_jobs_companies()
+ { 
+   $this->db->select();
+   $this->db->from('jobs_info');
+
+   $query = $this->db->get();
+   return $query->result();
+ }
  function get_current_jobs()
  {
    $this->db->select();

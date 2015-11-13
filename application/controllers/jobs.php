@@ -35,6 +35,8 @@ class Jobs extends CI_Controller {
     $data['current_jobs'] = $this->jobs_model->get_current_jobs();
     $data['future_jobs'] = $this->jobs_model->get_future_jobs();
     $data['completed_jobs'] = $this->jobs_model->get_completed_jobs();
+         $data['id'] = $session_data['id'];
+     $data['linked_tasks']=$this->get_tasks($data['id']);
     $data['jobs_info'] = $this->jobs_model->get_jobs_info();
     $data['level'] = $session_data['level'];
     $this->load->view('job/job_overview_view', $data);
@@ -68,11 +70,11 @@ class Jobs extends CI_Controller {
     foreach ($result3 as $key) {
       $linked_companies_ids = $key->linked_companies;
     }
-    $ids1 = explode(",",$linked_employees_ids);
-    $Jids1 = explode(",",$linked_jobs_ids);
+    $ids = explode(",",$linked_employees_ids);
+    $Jids = explode(",",$linked_jobs_ids);
     $Cids = explode(",", $linked_companies_ids);
-    $ids = array_slice($ids1, 1, 1);
-    $Jids = array_slice($Jids1, 2, 1);
+    array_pop($ids);
+    array_pop($Jids);
     if (empty($ids) == true)
     {
         $data['employees_view'] = null;
@@ -289,5 +291,34 @@ class Jobs extends CI_Controller {
      $data['potential'] = $total_potential;
      
      $this->services_model->update_service($service, $data);
+ }
+ function get_tasks($id)
+ {
+     $this->load->model('tasks_model','',TRUE);
+     $data = $this->tasks_model->get_tasks_emp();
+     $linked_tasks_ids = array();
+     foreach($data as $task)
+     {
+        $ids = explode(',', $task->linked_employees);
+        array_pop($ids);
+        foreach($ids as $ids_single)
+        {
+            if ($ids_single == $id)
+            {
+                $linked_tasks_ids[] = $task->id;
+            }
+        }
+     }
+     
+     
+     if (empty($linked_tasks_ids) != True)
+     {
+     $data = $this->tasks_model->get_tasks_linked($linked_tasks_ids);
+     }
+     else
+     {
+         $data = null;
+     }
+     return $data;
  }
 }

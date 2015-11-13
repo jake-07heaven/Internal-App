@@ -34,6 +34,8 @@ class Employees extends CI_Controller {
     $data['current_employees'] = $this->employees_model->get_current_employees();
     $data['future_employees'] = $this->employees_model->get_future_employees();
     $data['removed_employees'] = $this->employees_model->get_removed_employees();
+         $data['id'] = $session_data['id'];
+     $data['linked_tasks']=$this->get_tasks($data['id']);
     $data['level'] = $session_data['level'];
     $this->load->view('employee/employee_overview_view', $data);
     }
@@ -253,5 +255,34 @@ function move_employee_cur($id)
   else {
     redirect('employees/overview', 'refresh');
   }
+ }
+ function get_tasks($id)
+ {
+     $this->load->model('tasks_model','',TRUE);
+     $data = $this->tasks_model->get_tasks_emp();
+     $linked_tasks_ids = array();
+     foreach($data as $task)
+     {
+        $ids = explode(',', $task->linked_employees);
+        array_pop($ids);
+        foreach($ids as $ids_single)
+        {
+            if ($ids_single == $id)
+            {
+                $linked_tasks_ids[] = $task->id;
+            }
+        }
+     }
+     
+     
+     if (empty($linked_tasks_ids) != True)
+     {
+     $data = $this->tasks_model->get_tasks_linked($linked_tasks_ids);
+     }
+     else
+     {
+         $data = null;
+     }
+     return $data;
  }
 }

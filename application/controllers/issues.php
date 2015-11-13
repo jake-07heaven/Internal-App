@@ -34,6 +34,8 @@ class issues extends CI_Controller {
     $data['current_issues'] = $this->issues_model->get_current_issues();
     $data['future_issues'] = $this->issues_model->get_future_issues();
     $data['completed_issues'] = $this->issues_model->get_completed_issues();
+         $data['id'] = $session_data['id'];
+     $data['linked_tasks']=$this->get_tasks($data['id']);
     $data['level'] = $session_data['level'];
     $this->load->view('issue/issue_overview_view', $data);
     }
@@ -221,5 +223,34 @@ function move_issue_cur($id)
   else {
     redirect('issues/overview', 'refresh');
   }
+ }
+ function get_tasks($id)
+ {
+     $this->load->model('tasks_model','',TRUE);
+     $data = $this->tasks_model->get_tasks_emp();
+     $linked_tasks_ids = array();
+     foreach($data as $task)
+     {
+        $ids = explode(',', $task->linked_employees);
+        array_pop($ids);
+        foreach($ids as $ids_single)
+        {
+            if ($ids_single == $id)
+            {
+                $linked_tasks_ids[] = $task->id;
+            }
+        }
+     }
+     
+     
+     if (empty($linked_tasks_ids) != True)
+     {
+     $data = $this->tasks_model->get_tasks_linked($linked_tasks_ids);
+     }
+     else
+     {
+         $data = null;
+     }
+     return $data;
  }
 }
