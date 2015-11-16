@@ -11,9 +11,7 @@
 	$client_feeling = $key->client_feeling;
 }?>
 <html>
-	<?php $this->load->view('head'); ?>
-	 	<?php $this->load->view('header'); ?>
-	 	<?php $this->load->view('navigation'); ?>
+
 	 	<div class="single_page one-col">
 	 		<div class="section-header"><h2><?php echo $company; ?></h2><br><p><?php echo $issue; ?></p></div>
 	 		<div class="table">

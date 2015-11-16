@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <?php $baseurl = base_url(); ?>
 <html>
-    <?php $this->load->view('head'); ?>
-    <?php $this->load->view('header'); ?>
-    <?php $this->load->view('navigation'); ?>
     <div class="one-col container single_page">
                         <div class="section-header"><h2>Timings</h2></div>
         <?php if ($level == 5) : ?>

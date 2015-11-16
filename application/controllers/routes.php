@@ -35,6 +35,9 @@ class routes extends CI_Controller {
     $data['level'] = $session_data['level'];
          $data['id'] = $session_data['id'];
      $data['linked_tasks']=$this->get_tasks($data['id']);
+     $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
     $this->load->view('route/route_overview_view', $data);
     }
    }
@@ -51,6 +54,9 @@ class routes extends CI_Controller {
    {
         $data['routes'] = $this->routes_model->get_routes();
         $this->load->helper(array('form'));
+        $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
         $this->load->view('route/route_edit_view', $data);
    }
  }

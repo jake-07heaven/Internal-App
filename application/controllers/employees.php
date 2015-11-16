@@ -37,7 +37,11 @@ class Employees extends CI_Controller {
          $data['id'] = $session_data['id'];
      $data['linked_tasks']=$this->get_tasks($data['id']);
     $data['level'] = $session_data['level'];
+    $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
     $this->load->view('employee/employee_overview_view', $data);
+    $this->load->view('footer');
     }
     else {
       redirect('employees/employee/'.$session_data['id'].'/profile', 'refresh');
@@ -82,17 +86,29 @@ class Employees extends CI_Controller {
       {
         if($view == "profile")
         {
-          $this->load->view('employee/employee_view_view', $data);
+            $this->load->view('head', $data);
+            $this->load->view('header', $data);
+            $this->load->view('navigation', $data);
+            $this->load->view('employee/employee_view_view', $data);
+            $this->load->view('footer');
         }
         elseif ($view == "edit") {
           $this->load->helper(array('form'));
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
           $this->load->view('employee/employee_edit_view', $data);
+          $this->load->view('footer');
         }
         
       }
       else 
       {
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
         $this->load->view('employee/employee_view_view', $data);
+        $this->load->view('footer');
       }
       
     }
@@ -115,7 +131,11 @@ class Employees extends CI_Controller {
     if($session_data['level'] == 5)
     {
       $this->load->helper(array('form'));
+      $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
       $this->load->view('employee/employee_add_view', $data);
+      $this->load->view('footer');
     }
   }
  }

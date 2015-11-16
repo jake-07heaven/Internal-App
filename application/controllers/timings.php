@@ -39,6 +39,10 @@ class Timings extends CI_Controller {
          $data['id'] = $session_data['id'];
      $data['linked_tasks']=$this->get_tasks($data['id']);
     $data['completed_jobs'] = $this->timings_model->job_completed();
+    
+    $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
     $this->load->view('time/timings_overview_view', $data);
     }
    }
@@ -58,6 +62,10 @@ class Timings extends CI_Controller {
           $data['timings_info'] = $this->timings_model->get_timings($id);
         if ($view == "edit" && 5 == $session_data['level']) {
           $this->load->helper(array('form'));
+          
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
           $this->load->view('time/timings_edit_view', $data);
         }
         else

@@ -27,9 +27,7 @@ foreach ($job_info as $key) {
 
 <?php $baseurl = base_url(); ?>
 <html>
-	<?php $this->load->view('head'); ?>
-	 	<?php $this->load->view('header'); ?>
-	 	<?php $this->load->view('navigation'); ?>
+
 	 	<div class="employee-main-table">
 	 	<?php echo form_open('jobs/update_job'); ?>
                     

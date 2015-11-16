@@ -28,17 +28,16 @@ class Services extends CI_Controller {
    $session_data = $this->session->userdata('logged_in');
    if($this->session->userdata('logged_in'))
    {
-    if($session_data['level'] <= 5)
-    {
         $data['username'] = $session_data['username'];
     $data['level'] = $session_data['level'];
          $data['id'] = $session_data['id'];
      $data['linked_tasks']=$this->get_tasks($data['id']);
+     
+     $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
     $this->load->view('service/services_menu_view', $data);
-    }
-    else {
-      redirect('services/service/'.$session_data['id'].'/profile', 'refresh');
-    }
+    
    }
    else
    { 
@@ -88,10 +87,16 @@ class Services extends CI_Controller {
               $data['job_ongoing'] = null;
               $data['job_completed'] = null;
             }
+            $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
           $this->load->view('service/service_view_view', $data);
         }
         elseif ($view == "edit" && 5 == $session_data['level']) {
           $this->load->helper(array('form'));
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
           $this->load->view('service/service_edit_view', $data);
         }
         else

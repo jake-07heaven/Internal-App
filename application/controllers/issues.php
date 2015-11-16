@@ -37,6 +37,9 @@ class issues extends CI_Controller {
          $data['id'] = $session_data['id'];
      $data['linked_tasks']=$this->get_tasks($data['id']);
     $data['level'] = $session_data['level'];
+    $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
     $this->load->view('issue/issue_overview_view', $data);
     }
     else {
@@ -74,17 +77,26 @@ class issues extends CI_Controller {
         if($view == "profile")
         {
           $this->load->view('issue/issue_view_view', $data);
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
         }
         elseif ($view == "edit") {
           $data['employees'] = $this->issues_model->get_employees();
           $data['companies'] = $this->issues_model->get_companies();
           $this->load->helper(array('form'));
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
           $this->load->view('issue/issue_edit_view', $data);
         }
         
       }
       else 
       {
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
         $this->load->view('issue/issue_view_view', $data);
       }
    }
@@ -104,6 +116,9 @@ class issues extends CI_Controller {
     if($session_data['level'] == 5)
     {
       $this->load->helper(array('form'));
+      $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
       $this->load->view('issue/issue_add_view', $data);
     }
     else

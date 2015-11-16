@@ -36,6 +36,9 @@ class Companies extends CI_Controller {
     $data['level'] = $session_data['level'];     $data['id'] = $session_data['id'];
      $data['linked_tasks']=$this->get_tasks($data['id']);
     
+    $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
     $this->load->view('company/company_overview_view', $data);
     }
     else {
@@ -135,16 +138,25 @@ class Companies extends CI_Controller {
       {
         if($view == "profile")
         {
+            $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
           $this->load->view('company/company_view_view', $data);
         }
         elseif ($view == "edit") {
           $this->load->helper(array('form'));
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
           $this->load->view('company/company_edit_view', $data);
         }
         
       }
       else 
       {
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
         $this->load->view('company/company_view_view', $data);
       }
    }
@@ -163,6 +175,9 @@ class Companies extends CI_Controller {
     if($session_data['level'] == 5)
     {
       $this->load->helper(array('form'));
+      $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
       $this->load->view('company/company_add_view', $data);
     }
     else

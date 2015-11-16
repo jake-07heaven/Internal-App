@@ -7,9 +7,6 @@
     $userRole = $key->role;
 }?>
 <html>
-    <?php $this->load->view('head'); ?>
-    <?php $this->load->view('header'); ?>
-    <?php $this->load->view('navigation'); ?>
     <div class="single_page one-col">
         <div class="section-header"><h2><?php echo $userName; ?></h2><br><p><?php echo $userRole ?></p></div>
         <div class="table">
@@ -81,4 +78,3 @@
             }?>
         </div>
     </div>
-    <?php $this->load->view('footer'); ?>

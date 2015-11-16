@@ -39,6 +39,9 @@ class Jobs extends CI_Controller {
      $data['linked_tasks']=$this->get_tasks($data['id']);
     $data['jobs_info'] = $this->jobs_model->get_jobs_info();
     $data['level'] = $session_data['level'];
+    $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
     $this->load->view('job/job_overview_view', $data);
     }
     else {
@@ -100,6 +103,9 @@ class Jobs extends CI_Controller {
         if($view == "profile")
         {
             $this->load->helper(array('form'));
+            $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
             $this->load->view('job/job_view_view', $data);
         }
         elseif ($view == "edit") {
@@ -108,6 +114,9 @@ class Jobs extends CI_Controller {
           $data['companies'] = $this->jobs_model->get_companies();
           $data['services'] = $this->jobs_model->get_services();
           $this->load->helper(array('form'));
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
           $this->load->view('job/job_edit_view', $data);
         }
         
@@ -136,6 +145,9 @@ class Jobs extends CI_Controller {
     if($session_data['level'] == 5)
     {
       $this->load->helper(array('form'));
+      $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
       $this->load->view('job/job_add_view', $data);
     }
     else

@@ -1,8 +1,6 @@
 <?php $baseurl = base_url(); ?>
 <html>
-    <?php $this->load->view('head'); ?>
-    <?php $this->load->view('header'); ?>
-    <?php $this->load->view('navigation'); ?>
+
     <div class="one-col single_page">
         <?php foreach($service_info as $key){ $service = $key->name;} ?>
         <div class="section-header"><h2><?php echo $service; ?></h2><br><?php if($level == 5) :?><div id="<?php echo $key->id; ?>"class='add-button service-edit-button'><img src='<?php echo $baseurl; ?>/img/edit_icon.svg'></div><?php endif; ?></div>

@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
     <?php $baseurl = base_url(); $data['baseurl'] = $baseurl; ?>
-    <?php $this->load->view('head', $data); ?>
-    <?php $this->load->view('header', $data); ?>
-    <?php $this->load->view('navigation', $data); ?>
                 <div class="main clearfix dashboard">
                     <div class="left-col">
                         <div class="tab_container">
@@ -61,5 +58,3 @@
                         </div>
                                                     
             </div>
-
-    <?php $this->load->view('footer');

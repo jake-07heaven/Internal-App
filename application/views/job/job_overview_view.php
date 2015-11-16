@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <?php $baseurl = base_url(); ?>
 <html>
-    <?php $this->load->view('head'); ?>
-    <?php $this->load->view('header'); ?>
-    <?php $this->load->view('navigation'); ?>
+
     <div class="one-col">
         <?php if($level == 5) :?>
             <div class='add-button job-add-button'><img src='<?php echo $baseurl; ?>/img/add_icon.svg'></div>

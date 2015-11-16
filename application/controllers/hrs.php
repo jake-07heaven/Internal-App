@@ -37,6 +37,9 @@ class hrs extends CI_Controller {
          $data['id'] = $session_data['id'];
      $data['linked_tasks']=$this->get_tasks($data['id']);
     $data['level'] = $session_data['level'];
+    $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
     $this->load->view('hr/hr_overview_view', $data);
     }
     else {
@@ -60,6 +63,9 @@ class hrs extends CI_Controller {
           $data['hr'] = $this->hrs_model->get_hr_data($id);
           $data['employees'] = $this->hrs_model->get_employees();
           $this->load->helper(array('form'));
+          $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
           $this->load->view('hr/hr_edit_view', $data);
         }
       }
@@ -83,6 +89,9 @@ class hrs extends CI_Controller {
     if($session_data['level'] == 5)
     {
       $this->load->helper(array('form'));
+      $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
       $this->load->view('hr/hr_add_view', $data);
     }
     else

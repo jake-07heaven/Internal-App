@@ -10,9 +10,7 @@
 	$usernumber = $key->number;
 }?>
 <html>
-	<?php $this->load->view('head'); ?>
-	 	<?php $this->load->view('header'); ?>
-	 	<?php $this->load->view('navigation'); ?>
+
 	 	<div class="single_page one-col">
 	 		<div class="section-header"><h2><?php echo $userName; ?></h2></div>
 	 		<div class="table">

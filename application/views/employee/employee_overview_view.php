@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <?php $baseurl = base_url(); ?>
 <html>
-    <?php $this->load->view('head'); ?>
-    <?php $this->load->view('header'); ?>
-    <?php $this->load->view('navigation'); ?>
+
     <div class="one-col">
         <div class="table">
         <div class='add-button employee-add-button'><img src='<?php echo $baseurl; ?>/img/add_icon.svg'></div>
@@ -34,4 +32,3 @@
             </table>
         </div>
     </div>
-    <?php $this->load->view('footer'); ?>

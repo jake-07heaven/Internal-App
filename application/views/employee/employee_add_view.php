@@ -1,8 +1,6 @@
 <?php $baseurl = base_url(); ?>
 <html>
-    <?php $this->load->view('head'); ?>
-    <?php $this->load->view('header'); ?>
-    <?php $this->load->view('navigation'); ?>
+
     <div class="single_table">
     <?php echo form_open('employees/add_employee'); ?>
             <div class="container">

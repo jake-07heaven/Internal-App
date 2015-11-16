@@ -37,7 +37,11 @@ class Dashboard extends CI_Controller {
      $data['ongoing_issues'] = $this->get_ongoing_issues();
      $data['companies'] = $this->get_companies();
      $data['issues_ammount'] = count($data['ongoing_issues']);
+     $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
      $this->load->view('dashboard_view', $data);
+     $this->load->view('footer');
    }
    else
    {
