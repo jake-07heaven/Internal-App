@@ -58,4 +58,4 @@ foreach ($company_info as $key) {
             </div>
         </div>
     </form>
-    <?php $this->load->view('footer'); ?>
+</div>

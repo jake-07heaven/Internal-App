@@ -24,7 +24,11 @@ class Tasks extends CI_Controller {
             $data['jobs'] = $this->get_jobs();
             $data['jobs_companies'] = $this->get_jobs_comp();
             $this->load->helper(array('form'));
+            $this->load->view('head', $data);
+            $this->load->view('header', $data);
+            $this->load->view('navigation', $data);
             $this->load->view("task/normal/add_task_view", $data);
+            $this->load->view('footer');
         }
 
 

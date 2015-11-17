@@ -18,7 +18,6 @@
                 <input class="text-input" type="submit" value="Update Routes">
         </form>
     </div>
-	 	<?php $this->load->view('footer'); ?>
 
 
 

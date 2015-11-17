@@ -37,6 +37,7 @@ class Services extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
     $this->load->view('service/services_menu_view', $data);
+    $this->load->view('footer');
     
    }
    else
@@ -91,6 +92,7 @@ class Services extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
           $this->load->view('service/service_view_view', $data);
+          $this->load->view('footer');
         }
         elseif ($view == "edit" && 5 == $session_data['level']) {
           $this->load->helper(array('form'));
@@ -98,6 +100,7 @@ class Services extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
           $this->load->view('service/service_edit_view', $data);
+          $this->load->view('footer');
         }
         else
         {

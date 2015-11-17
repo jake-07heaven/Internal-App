@@ -44,6 +44,7 @@ class Timings extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
     $this->load->view('time/timings_overview_view', $data);
+    $this->load->view('footer');
     }
    }
    else
@@ -67,6 +68,7 @@ class Timings extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
           $this->load->view('time/timings_edit_view', $data);
+          $this->load->view('footer');
         }
         else
         {

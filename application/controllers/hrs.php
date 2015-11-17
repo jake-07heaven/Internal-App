@@ -41,6 +41,7 @@ class hrs extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
     $this->load->view('hr/hr_overview_view', $data);
+    $this->load->view('footer');
     }
     else {
       redirect('dashboard', 'refresh');
@@ -67,6 +68,7 @@ class hrs extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
           $this->load->view('hr/hr_edit_view', $data);
+          $this->load->view('footer');
         }
       }
       else 
@@ -93,6 +95,7 @@ class hrs extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
       $this->load->view('hr/hr_add_view', $data);
+      $this->load->view('footer');
     }
     else
     {

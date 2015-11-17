@@ -1,8 +1,5 @@
 <html>
     <?php $baseurl = base_url(); $data['baseurl'] = $baseurl; ?>
-    <?php $this->load->view('head', $data); ?>
-    <?php $this->load->view('header', $data); ?>
-    <?php $this->load->view('navigation', $data); ?>
     <div class="container">
         <?php echo form_open('tasks/add'); ?>
         <div class="task-page col-sm-8 no-box">
@@ -94,4 +91,3 @@
         </div>
     </form>
     </div>
-    <?php $this->load->view('footer');

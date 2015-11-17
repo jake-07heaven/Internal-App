@@ -25,4 +25,3 @@
             </table>
         </div>
     </div>
-    <?php $this->load->view('footer');

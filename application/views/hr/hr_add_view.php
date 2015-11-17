@@ -31,4 +31,3 @@
         </div>
         </form>
     </div>
-    <?php $this->load->view('footer'); ?>

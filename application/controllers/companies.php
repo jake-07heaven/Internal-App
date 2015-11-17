@@ -40,6 +40,7 @@ class Companies extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
     $this->load->view('company/company_overview_view', $data);
+    $this->load->view('footer');
     }
     else {
       redirect('companies/company/'.$session_data['id'].'/profile', 'refresh');
@@ -142,6 +143,7 @@ class Companies extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
           $this->load->view('company/company_view_view', $data);
+          $this->load->view('footer');
         }
         elseif ($view == "edit") {
           $this->load->helper(array('form'));
@@ -149,15 +151,17 @@ class Companies extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
           $this->load->view('company/company_edit_view', $data);
+          $this->load->view('footer');
         }
         
       }
       else 
       {
-          $this->load->view('head', $data);
-    $this->load->view('header', $data);
-    $this->load->view('navigation', $data);
+        $this->load->view('head', $data);
+        $this->load->view('header', $data);
+        $this->load->view('navigation', $data);
         $this->load->view('company/company_view_view', $data);
+        $this->load->view('footer');
       }
    }
    else
@@ -179,6 +183,7 @@ class Companies extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
       $this->load->view('company/company_add_view', $data);
+      $this->load->view('footer');
     }
     else
     {

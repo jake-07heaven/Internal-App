@@ -32,7 +32,9 @@
         <p>&copy; 2015 07 Heaven Design. All rights reserved | Website designed by 07 Heaven Design | Made by yours truly Jake Alder</p>
     </div>
 </footer>
-<?php $this->load->view('sidebar/bottom'); ?>
+</div><!-- /st-pusher -->
+ 
+</div><!-- /st-container -->
 </body>
 <script src="<?php echo base_url(); ?>js/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>js/stickyfooter.js" type="text/javascript"></script>

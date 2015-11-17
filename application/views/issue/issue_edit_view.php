@@ -89,4 +89,3 @@ foreach ($issue_info as $key) {
                 </div>
             </div>
         </form>
-        <?php $this->load->view('footer'); 

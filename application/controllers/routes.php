@@ -39,6 +39,7 @@ class routes extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
     $this->load->view('route/route_overview_view', $data);
+    $this->load->view('footer');
     }
    }
    else
@@ -58,6 +59,7 @@ class routes extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
         $this->load->view('route/route_edit_view', $data);
+        $this->load->view('footer');
    }
  }
 // function route($id, $view)

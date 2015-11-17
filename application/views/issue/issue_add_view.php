@@ -36,4 +36,3 @@
 	 		</table>
 	 	</form>
 	 	</div>
-	 	<?php $this->load->view('footer'); ?>

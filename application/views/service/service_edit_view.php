@@ -17,7 +17,6 @@
                 <input class="text-input" type="submit" value="Update Service">
         </form>
     </div>
-	 	<?php $this->load->view('footer'); ?>
 
 
 

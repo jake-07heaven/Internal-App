@@ -78,9 +78,6 @@ Class hrs_model extends CI_Model
    $this->db->where('id', $id);
    $this->db->delete('hrs');
 
-   $this->db->where('id', $id);
-   $this->db->delete('hrs_info');
-
    return TRUE;
  }
   function get_employees()

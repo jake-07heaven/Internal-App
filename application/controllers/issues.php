@@ -41,6 +41,7 @@ class issues extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
     $this->load->view('issue/issue_overview_view', $data);
+    $this->load->view('footer');
     }
     else {
       redirect('issues/issue/'.$session_data['id'].'/profile', 'refresh');
@@ -89,6 +90,7 @@ class issues extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
           $this->load->view('issue/issue_edit_view', $data);
+          $this->load->view('footer');
         }
         
       }
@@ -98,6 +100,7 @@ class issues extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
         $this->load->view('issue/issue_view_view', $data);
+        $this->load->view('footer');
       }
    }
    else
@@ -120,6 +123,7 @@ class issues extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
       $this->load->view('issue/issue_add_view', $data);
+      $this->load->view('footer');
     }
     else
     {

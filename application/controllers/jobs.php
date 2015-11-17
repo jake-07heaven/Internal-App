@@ -43,6 +43,7 @@ class Jobs extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
     $this->load->view('job/job_overview_view', $data);
+    $this->load->view('footer');
     }
     else {
       redirect('jobs/job/'.$session_data['id'].'/profile', 'refresh');
@@ -118,13 +119,18 @@ class Jobs extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
           $this->load->view('job/job_edit_view', $data);
+          $this->load->view('footer');
         }
         
       }
       else 
       {
           $this->load->helper(array('form'));
+                    $this->load->view('head', $data);
+    $this->load->view('header', $data);
+    $this->load->view('navigation', $data);
         $this->load->view('job/job_view_view', $data);
+        $this->load->view('footer');
       }
    }
    else
@@ -149,6 +155,7 @@ class Jobs extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
       $this->load->view('job/job_add_view', $data);
+      $this->load->view('footer');
     }
     else
     {

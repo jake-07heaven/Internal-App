@@ -28,7 +28,6 @@
                 <input class="text-input" type="submit" value="Update Timings">
         </form>
     </div>
-    <?php $this->load->view('footer'); ?>
 
 
 
