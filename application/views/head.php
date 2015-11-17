@@ -7,6 +7,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
         <script src="<?php echo base_url(); ?>js/moment.js"></script>
 	<script type="text/javascript"> 
 	function display_c(){
