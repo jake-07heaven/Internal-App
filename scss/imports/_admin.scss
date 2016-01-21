@@ -16,9 +16,11 @@ and open the template in the editor.
             border-right: grey 1px solid;
             height: 100%;
             background: linear-gradient(to right,#29aae2 0,#0855a3 100%);
+            float: left;
         }
-        .content {
+        .admin-content {
             width: 50%;
+            float: left;
         }
         .right_sidebar {
             width: 25%;

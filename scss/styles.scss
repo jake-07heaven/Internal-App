@@ -15,12 +15,18 @@ and open the template in the editor.
 @import 'imports/task';
 @import 'imports/footer';
 
+
+img {
+    max-width: 100%;
+}
+
 .content {
     position: absolute;
     display: block;
     top: 0;
     width: 100%;
     text-align: center;
+    height: 100%;
     left: 0;
     z-index: 100;
     transition: all 0.7s ease-out;

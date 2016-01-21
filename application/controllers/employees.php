@@ -58,6 +58,8 @@ class Employees extends CI_Controller {
    if($this->session->userdata('logged_in'))
    {
     $data['level'] = $session_data['level'];
+    $data['username'] = $session_data['username'];
+    $data['linked_tasks'] = $this->get_tasks($session_data['id']);
     $data['employee_level'] = $this->employees_model->get_employee_levels($id);
     $data['employee_info'] = $this->employees_model->get_employee_info($id);
     $current_employee = $this->employees_model->get_employee_name($id);
@@ -126,6 +128,8 @@ class Employees extends CI_Controller {
  {
      $session_data = $this->session->userdata('logged_in');
      $data['level'] = $session_data['level'];
+     $data['username'] = $session_data['username'];
+    $data['linked_tasks'] = $this->get_tasks($session_data['id']);
   if($this->session->userdata('logged_in'))
   {
     if($session_data['level'] == 5)

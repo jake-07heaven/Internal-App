@@ -146,6 +146,7 @@ Class companies_model extends CI_Model
 
    $Edata1 = array(
       'id' => $newID,
+      'comp_id' => $data1['comp_id'],
       'name' => $data1['name'],
       'date_joined' => $data1['join_date'],
       'number' => $data1['number'],
@@ -171,6 +172,7 @@ Class companies_model extends CI_Model
  {
       $Edata1 = array(
       'id' => $data,
+      'comp_id' => $data1['comp_id'],
       'name' => $data1['name'],
       'date_joined' => $data1['join_date'],
       'number' => $data1['number'],

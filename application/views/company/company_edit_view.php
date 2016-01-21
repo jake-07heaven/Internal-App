@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php foreach ($company_level as $key) {
 	$name = $key->name;
+        $comp_id = $key->comp_id;
 	$join_date = $key->date_joined;
 	$status = $key->status;
 	$number = $key->number;
@@ -34,7 +35,8 @@ foreach ($company_info as $key) {
         <div class="container">
                 <div class="container">
                     <div class="col-xs-12"><div class="section-header-input">Name: <input class="text-input" type="text" name="name" id="name" value="<?php echo $name; ?>"></div></div>
-            </div>
+                    <div class="col-xs-12"><div class="section-header-input">Company ID: <input class="text-input" type="text" name="comp_id" id="comp_id" value="<?php echo $comp_id; ?>"></div></div>
+                </div>
             <div class="table-input">
                 <table>
                     <tr><td>Company Join Date: <input class="text-input" type="date" name="join_date" id="join_date" value="<?php echo $join_date; ?>"></td><td>Company Hours: <input class="text-input" type="number" name="hours" id="hours" value="<?php echo $hours; ?>"></td><td>Company Refferals: <input class="text-input" type="number" name="refferals" id="refferals" value="<?php echo $refferals; ?>" ></td></tr>

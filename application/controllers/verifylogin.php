@@ -56,6 +56,8 @@ class VerifyLogin extends CI_Controller {
         $this->update_days();
 
         $this->update_percentages($id);
+        $sess = array('log' => 'true');
+        $this->session->set_userdata('first-log', $sess);
         return TRUE;
       }
       

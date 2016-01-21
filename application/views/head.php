@@ -9,18 +9,5 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
         <script src="<?php echo base_url(); ?>js/moment.js"></script>
-	<script type="text/javascript"> 
-	function display_c(){
-	var refresh=1000; // Refresh rate in milli seconds
-	mytime=setTimeout('display_ct()',refresh);
-	}
-        function display_ct() {
-            var y = moment().format('HH:mm:ss');
-            var x = moment().format('dddd, DD[/]MM[/]YY');
-            document.getElementById('ct').innerHTML = x;
-            document.getElementById('t').innerHTML = y;
-            tt=display_c();
-        }
-	</script>
 </head>
-<body onload=display_ct();>
+<body>

@@ -10,7 +10,7 @@
         <div class="table">
 	    <h2>Potential Companies</h2>
 	    <table class="sortable">
-                <tr class="table-titles"><td>Name</td><td>ID</td><td>Join Date</td><td>Number</td><td>Contact</td><td>Spend</td><td>Hapinesss</td><td>last contact</td></tr>
+                <tr class="table-titles"><td>Name</td><td>Company ID</td><td>Join Date</td><td>Number</td><td>Contact</td><td>Spend</td><td>Happiness</td><td>last contact</td></tr>
                 <?php foreach ($future_companies as $key) {
                 if($level == 5) {
                      $button = "<div id='" . $key->id . "'class='company-edit-button edit-button'><img src='" . $baseurl . "/img/edit_icon.svg'></div>";
@@ -19,14 +19,14 @@
                 {
                      $button = "";
                 }
-                echo "<tr><td class='view-button company-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . $key->id . "</td><td>" . date('d/m/y',strtotime($key->date_joined)) . "</td><td>" . $key->number . "</td><td>" . $key->contact . "</td><td>" . $key->spend . "</td><td>" . $key->happiness . "</td><td>" . date('d/m/y',strtotime($key->last_contact)) . "</td><td>" . $button . "</td></tr>";
+                echo "<tr><td class='view-button company-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . $key->comp_id . "</td><td>" . date('d/m/y',strtotime($key->date_joined)) . "</td><td>" . $key->number . "</td><td>" . $key->contact . "</td><td>" . $key->spend . "</td><td>" . $key->happiness . "</td><td>" . date('d/m/y',strtotime($key->last_contact)) . "</td><td>" . $button . "</td></tr>";
                  }?>
             </table>
         </div>
         <div class="table">
 	    <h2>Current Companies</h2>
 	    <table class="sortable">
-                <tr class="table-titles"><td>Name</td><td>ID</td><td>Join Date</td><td>Number</td><td>Contact</td><td>Spend</td><td>Hapinesss</td><td>last contact</td></tr>
+                <tr class="table-titles"><td>Name</td><td>Company ID</td><td>Join Date</td><td>Number</td><td>Contact</td><td>Spend</td><td>Happiness</td><td>last contact</td></tr>
                 <?php foreach ($current_companies as $key) {
                 if($level == 5) {
                      $button = "<div id='" . $key->id . "'class='company-edit-button edit-button'><img src='" . $baseurl . "/img/edit_icon.svg'></div>";
@@ -35,7 +35,7 @@
                 {
                      $button = "";
                 }
-                echo "<tr><td class='view-button company-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . $key->id . "</td><td>" . date('d/m/y',strtotime($key->date_joined)) . "</td><td>" . $key->number . "</td><td>" . $key->contact . "</td><td>" . $key->spend . "</td><td>" . $key->happiness . "</td><td>" . date('d/m/y',strtotime($key->last_contact)) . "</td><td>" . $button . "</td></tr>";
+                echo "<tr><td class='view-button company-view-button' id='" . $key->id . "'>" . $key->name . "</td><td>" . $key->comp_id . "</td><td>" . date('d/m/y',strtotime($key->date_joined)) . "</td><td>" . $key->number . "</td><td>" . $key->contact . "</td><td>" . $key->spend . "</td><td>" . $key->happiness . "</td><td>" . date('d/m/y',strtotime($key->last_contact)) . "</td><td>" . $button . "</td></tr>";
                 }?>
             </table>
         </div>

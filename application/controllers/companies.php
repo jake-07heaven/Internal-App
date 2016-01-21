@@ -55,6 +55,8 @@ class Companies extends CI_Controller {
  {
      $session_data = $this->session->userdata('logged_in');
      $data['level'] = $session_data['level'];
+    $data['username'] = $session_data['username'];
+    $data['linked_tasks'] = $this->get_tasks($session_data['id']);
    if($this->session->userdata('logged_in'))
    {
     $data['company_level'] = $this->companies_model->get_company_levels($id);
@@ -140,29 +142,28 @@ class Companies extends CI_Controller {
         if($view == "profile")
         {
             $this->load->view('head', $data);
-    $this->load->view('header', $data);
-    $this->load->view('navigation', $data);
-          $this->load->view('company/company_view_view', $data);
-          $this->load->view('footer');
+            $this->load->view('header', $data);
+            $this->load->view('navigation', $data);
+            $this->load->view('company/company_view_view', $data);
+            $this->load->view('footer');
         }
         elseif ($view == "edit") {
-          $this->load->helper(array('form'));
-          $this->load->view('head', $data);
-    $this->load->view('header', $data);
-    $this->load->view('navigation', $data);
-          $this->load->view('company/company_edit_view', $data);
-          $this->load->view('footer');
+            $this->load->helper(array('form'));
+            $this->load->view('head', $data);
+            $this->load->view('header', $data);
+            $this->load->view('navigation', $data);
+            $this->load->view('company/company_edit_view', $data);
+            $this->load->view('footer');
         }
-        
-      }
-      else 
-      {
-        $this->load->view('head', $data);
-        $this->load->view('header', $data);
-        $this->load->view('navigation', $data);
-        $this->load->view('company/company_view_view', $data);
-        $this->load->view('footer');
-      }
+    }
+    else 
+        {
+            $this->load->view('head', $data);
+            $this->load->view('header', $data);
+            $this->load->view('navigation', $data);
+            $this->load->view('company/company_view_view', $data);
+            $this->load->view('footer');
+        }
    }
    else
    { 
@@ -171,6 +172,9 @@ class Companies extends CI_Controller {
  }
  function addcompany()
  {
+     $session_data = $this->session->userdata('logged_in');
+     $data['username'] = $session_data['username'];
+    $data['linked_tasks'] = $this->get_tasks($session_data['id']);
      $session_data = $this->session->userdata('logged_in');
      $data['level'] = $session_data['level'];
      
@@ -194,6 +198,7 @@ class Companies extends CI_Controller {
  function add_company()
  {
   $data1['name'] = $this->input->post('name');
+  $data1['comp_id'] = $this->input->post('comp_id');
   $data1['join_date'] = $this->input->post('join_date');
   $data1['number'] = $this->input->post('number');
   $data1['contact'] = $this->input->post('contact');
@@ -233,6 +238,7 @@ class Companies extends CI_Controller {
  function update_company()
  {
   $data['id'] = $this->input->post('id');
+  $data1['comp_id'] = $this->input->post('comp_id');
   $data1['name'] = $this->input->post('name');
   $data1['join_date'] = $this->input->post('join_date');
   $data1['number'] = $this->input->post('number');

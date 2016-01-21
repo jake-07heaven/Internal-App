@@ -5,6 +5,7 @@
         <div class="container">
                 <div class="container">
                     <div class="col-xs-12"><div class="section-header-input">Name: <input class="text-input" type="text" name="name" id="name"></div></div>
+                    <div class="col-xs-12"><div class="section-header-input">Company ID: <input class="text-input" type="text" name="comp_id" id="comp_id"></div></div>
             </div>
             <div class="table-input">
                 <table>
@@ -22,7 +23,7 @@
             </div>
             <div class="table-input">
                 <table>
-                    <tr><td><input class="text-input" type="submit" value="Update Company"></td></tr>
+                    <tr><td><input class="text-input" type="submit" value="Add Company"></td></tr>
                 </table>
             </div>
         </div>

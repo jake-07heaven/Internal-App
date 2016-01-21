@@ -5,7 +5,7 @@
     <div class="one-col container">
         <?php echo form_open('routes/update_route'); ?>
                 <?php foreach ($routes as $key) : ?>
-                <div class="col-md-4 text-input">
+                <div style="padding-bottom: 10px; border-bottom: 2px black solid;" class="col-md-2">
                     <table class="float-left">
                         <tr><td><input class="text-input" name="<?php echo $key->id; ?>-name" value="<?php echo $key->name;?>"></td></tr>
                         <tr><td><input class="text-input" name="<?php echo $key->id; ?>-leads" value="<?php echo $key->leads;?>"></td></tr>

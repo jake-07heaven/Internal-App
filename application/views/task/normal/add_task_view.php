@@ -1,7 +1,7 @@
-<html>
+
     <?php $baseurl = base_url(); $data['baseurl'] = $baseurl; ?>
     <div class="container">
-        <?php echo form_open('tasks/add'); ?>
+        <?php echo form_open('tasks/new_task'); ?>
         <div class="task-page col-sm-8 no-box">
             <div class="task-section center"><h2><input readonly="readonly" name="task" id="task" class="full input_name" value=""></h2></div>
             <div class="task-section center"><textarea readonly="readonly" name="desc" id="desc" class="full task-desc"></textarea></div>
@@ -77,8 +77,8 @@
                 <li class="t5">
                     <h3>5. Give some dates!</h3>
                     <div class="task-tab unextended task_side_content" id="name">
-                        <input class="task_date task-start" type="date">
-                        <input class="task_date task-end" type="date">
+                        <input class="task_date task-start" type="datetime">
+                        <input class="task_date task-end" type="datetime">
                         <div class="task_buttons">
                         <div class="task_button task_back t4">Back</div>
                         <div class="task_button task_next finish">Finished</div>

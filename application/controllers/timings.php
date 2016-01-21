@@ -28,47 +28,46 @@ class Timings extends CI_Controller {
    $session_data = $this->session->userdata('logged_in');
    if($this->session->userdata('logged_in'))
    {
-    if($session_data['level'] <= 5)
-    {
-        $this->update_percentages();
-        $data['username'] = $session_data['username'];
-    $data['level'] = $session_data['level'];
-    $data['timings'] = $this->timings_model->get_timings();
-    $data['employees'] = $this->timings_model->get_employees();
-    $data['current_jobs'] = $this->timings_model->job_ongoing();
-         $data['id'] = $session_data['id'];
-     $data['linked_tasks']=$this->get_tasks($data['id']);
-    $data['completed_jobs'] = $this->timings_model->job_completed();
-    
-    $this->load->view('head', $data);
-    $this->load->view('header', $data);
-    $this->load->view('navigation', $data);
-    $this->load->view('time/timings_overview_view', $data);
-    $this->load->view('footer');
-    }
+        if($session_data['level'] <= 5)
+        {
+            $this->update_percentages();
+            $data['username'] = $session_data['username'];
+            $data['level'] = $session_data['level'];
+            $data['timings'] = $this->timings_model->get_timings();
+            $data['employees'] = $this->timings_model->get_employees();
+            $data['current_jobs'] = $this->timings_model->job_ongoing();
+            $data['id'] = $session_data['id'];
+            $data['linked_tasks']=$this->get_tasks($data['id']);
+            $data['completed_jobs'] = $this->timings_model->job_completed();
+
+            $this->load->view('head', $data);
+            $this->load->view('header', $data);
+            $this->load->view('navigation', $data);
+            $this->load->view('time/timings_overview_view', $data);
+            $this->load->view('footer');
+        }
    }
    else
    { 
-     redirect('login', 'refresh');
+        redirect('login', 'refresh');
    }
  }
  function time($id, $view)
  {
-     $session_data = $this->session->userdata('logged_in');
-     $data['level'] = $session_data['level'];
-   if($this->session->userdata('logged_in'))
-   {
-      if(5 >= $session_data['level'])
-      {
-          $data['timings_info'] = $this->timings_model->get_timings($id);
-        if ($view == "edit" && 5 == $session_data['level']) {
-          $this->load->helper(array('form'));
-          
-          $this->load->view('head', $data);
-    $this->load->view('header', $data);
-    $this->load->view('navigation', $data);
-          $this->load->view('time/timings_edit_view', $data);
-          $this->load->view('footer');
+    $session_data = $this->session->userdata('logged_in');
+    $data['level'] = $session_data['level'];
+    if($this->session->userdata('logged_in'))
+    {
+        if(5 >= $session_data['level'])
+        {
+            $data['timings_info'] = $this->timings_model->get_timings($id);
+            if ($view == "edit" && 5 == $session_data['level']) {
+                $this->load->helper(array('form'));
+                $this->load->view('head', $data);
+                $this->load->view('header', $data);
+                $this->load->view('navigation', $data);
+                $this->load->view('time/timings_edit_view', $data);
+                $this->load->view('footer');
         }
         else
         {
@@ -84,25 +83,24 @@ class Timings extends CI_Controller {
  }
  function update_time()
  {
-  $data1['year_to_date'] = $this->input->post('year_to_date');
-  $data1['this_month'] = $this->input->post('this_month');
-  $data1['this_week'] = $this->input->post('this_week');
-  $data1['marketing'] = $this->input->post('marketing');
-  $data1['website'] = $this->input->post('website');
-  $data1['print'] = $this->input->post('print');
-  $data1['seo'] = $this->input->post('seo');
-  $data1['social'] = $this->input->post('social');
-  $data1['video'] = $this->input->post('video');
-  $data1['content'] = $this->input->post('content');
-  $data1['signage'] = $this->input->post('signage');
-  $data1['photography'] = $this->input->post('photography');
-  $data1['email'] = $this->input->post('email');
-  $data1['ecommerce'] = $this->input->post('ecommerce');
-  
+    $data1['year_to_date'] = $this->input->post('year_to_date');
+    $data1['this_month'] = $this->input->post('this_month');
+    $data1['this_week'] = $this->input->post('this_week');
+    $data1['marketing'] = $this->input->post('marketing');
+    $data1['website'] = $this->input->post('website');
+    $data1['print'] = $this->input->post('print');
+    $data1['seo'] = $this->input->post('seo');
+    $data1['social'] = $this->input->post('social');
+    $data1['video'] = $this->input->post('video');
+    $data1['content'] = $this->input->post('content');
+    $data1['signage'] = $this->input->post('signage');
+    $data1['photography'] = $this->input->post('photography');
+    $data1['email'] = $this->input->post('email');
+    $data1['ecommerce'] = $this->input->post('ecommerce');
 
-  $this->timings_model->update_timings($data1);
+    $this->timings_model->update_timings($data1);
 
-  redirect('timings/overview', 'refresh');
+    redirect('timings/overview', 'refresh');
  }
  function update_percentages()
  {

@@ -4,57 +4,62 @@ error_reporting(E_ALL);
 session_start(); //we need to call PHP's session object to access it through CI
 class Dashboard extends CI_Controller {
 
- function __construct()
- {
-   parent::__construct();
- }
+function __construct()
+{
+    parent::__construct();
+}
 
- function index()
- {
-   $this->load->helper('url');
-   if($this->session->userdata('logged_in'))
-   {
-     $session_data = $this->session->userdata('logged_in');
-     $data['username'] = $session_data['username'];
-     $data['level'] = $session_data['level'];
-     $data['id'] = $session_data['id'];
-     $data['linked_tasks']=$this->get_tasks($data['id']);
-     $data['ongoing_jobs'] = $this->get_ongoing_jobs();
-     $ids = array();
-     foreach($data['ongoing_jobs'] as $key)
-     {
-         $ids[] = $key->id;
-     }
-     $data['jobs_ammount'] = count($ids);
-     if (empty($ids) != true)
-     {
-     $data['ongoing_jobs_extra'] = $this->get_ongoing_jobs_extra($ids);
-     }
-     else
-     {
-         $data['ongoing_jobs_extra'] = null;
-     }
-     $data['ongoing_issues'] = $this->get_ongoing_issues();
-     $data['companies'] = $this->get_companies();
-     $data['issues_ammount'] = count($data['ongoing_issues']);
-     $this->load->view('head', $data);
+function index()
+{
+    $this->load->helper('url');
+    if($this->session->userdata('logged_in'))
+    {
+    $session_data = $this->session->userdata('logged_in');
+    $session_data1 = $this->session->userdata('first-log');
+    $data['log'] = $session_data1['log'];
+    $data['username'] = $session_data['username'];
+    $data['level'] = $session_data['level'];
+    $data['id'] = $session_data['id'];
+    $data['linked_tasks']=$this->get_tasks($data['id']);
+    $data['ongoing_jobs'] = $this->get_ongoing_jobs();
+    $ids = array();
+    foreach($data['ongoing_jobs'] as $key)
+    {
+        $ids[] = $key->id;
+    }
+    $data['jobs_ammount'] = count($ids);
+    if (empty($ids) != true)
+    {
+        $data['ongoing_jobs_extra'] = $this->get_ongoing_jobs_extra($ids);
+    }
+    else
+    {
+        $data['ongoing_jobs_extra'] = null;
+    }
+    $data['ongoing_issues'] = $this->get_ongoing_issues();
+    $data['companies'] = $this->get_companies();
+    $data['issues_ammount'] = count($data['ongoing_issues']);
+    $this->load->view('head', $data);
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
-     $this->load->view('dashboard_view', $data);
-     $this->load->view('footer');
-   }
-   else
-   {
-     //If no session, redirect to login page
-     redirect('login', 'refresh');
-   }
- }
- function logout()
- {
-   $this->session->unset_userdata('logged_in');
-   session_destroy();
-   redirect('dashboard', 'refresh');
- }
+    $this->load->view('dashboard_view', $data);
+    $this->load->view('footer');
+    $sess = array('log' => 'false');
+    $this->session->set_userdata('first-log', $sess);
+    }
+    else
+    {
+    //If no session, redirect to login page
+    redirect('login', 'refresh');
+    }
+}
+function logout()
+{
+    $this->session->unset_userdata('logged_in');
+
+    session_destroy();
+    redirect('dashboard', 'refresh');
+}
  function get_ongoing_jobs()
  {
     $this->load->model('jobs_model','',TRUE);

@@ -108,6 +108,7 @@ class Jobs extends CI_Controller {
     $this->load->view('header', $data);
     $this->load->view('navigation', $data);
             $this->load->view('job/job_view_view', $data);
+                $this->load->view('footer');
         }
         elseif ($view == "edit") {
           $data['employees'] = $this->jobs_model->get_employees();

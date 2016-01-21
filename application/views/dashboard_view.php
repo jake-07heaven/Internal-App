@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <?php $baseurl = base_url(); $data['baseurl'] = $baseurl; ?>
+    <?php $baseurl = base_url(); $data['baseurl'] = $baseurl;?>
+    <div class="pop-up">
+    </div>
                 <div class="main clearfix dashboard">
                     <div class="left-col">
                         <div class="tab_container">

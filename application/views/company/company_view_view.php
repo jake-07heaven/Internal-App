@@ -2,6 +2,7 @@
 <?php $baseurl = base_url(); ?>
 <?php foreach ($company_level as $key) {
 	$userName = $key->name;
+        $userComp_id = $key->comp_id;
 	$userjoin_date = $key->date_joined;
 	$userspend = $key->spend;
 	$userlastcontact = $key->last_contact;
@@ -13,6 +14,7 @@
 
 	 	<div class="single_page one-col">
 	 		<div class="section-header"><h2><?php echo $userName; ?></h2></div>
+	 		<div class="section-header"><p><?php echo $userComp_id; ?></p></div>
 	 		<div class="table">
 			 	<table>
 					<tr class="table-titles"><td>spend</td><td>cost</td><td>profit</td><td>potential</td><td>hours</td></tr>

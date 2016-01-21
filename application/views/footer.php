@@ -132,6 +132,11 @@ $('.task_back').click(function() {
     });
 </script>
 <script>
+$('.task-row').click(function() { 
+    var id = $(this).attr('id');
+    var url = <?php echo json_encode(base_url()); ?>;
+    window.location.href = url + "tasks/view/" + id;
+});
 $('.employee-button').click(function() { 
     var id = $(this).attr('id');
     var row = "#row-" + id;
